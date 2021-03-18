@@ -7,3 +7,5 @@ print("Hello world")
 print('OkDone.')
 
 # %% Odkaz 3 - umoznuje Ruc Cell Bellow
+print('su tu.')
+
