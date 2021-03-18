@@ -11,3 +11,7 @@ print('Napsano v GitPod.io.')
 
 # %% Odkaz 4 - umoznuje Ruc Cell Bellow
 print('Napsano na lokale.')
+
+# %% Odkaz 5 - umoznuje Ruc Cell Bellow
+print('Napsano v GitHub.com')
+
