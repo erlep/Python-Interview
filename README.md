@@ -1,4 +1,4 @@
-# Python-Interview v1.0 - from 18.03.2021 07:43
+# Python-Interview v1.0b - from 18.03.2021 13:14
 
 Preparing for a Python Interview
 
@@ -9,8 +9,6 @@ Python Data Types - https://www.w3schools.com/python/python_datatypes.asp
 
 and the others
 
-# GitHub URL
+## GitHub URL - https://GitHub.com/ErleP/Python-Interview
 
-https://GitHub.com/ErleP/Python-Interview
-
-# made by peg https://GitHub.com/ErleP
+## made by peg - https://GitHub.com/ErleP
