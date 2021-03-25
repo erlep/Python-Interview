@@ -7,9 +7,13 @@
 # 2 Flow Control
 print("\t for  ====================")
 for i in range(1, 10, 2):
-  print(i)
-  if i >= 5:
+  if i >= 7:
     break
+  elif i == 3:
+    # zadny kod
+    pass
+  else:
+    print(i)
 else:
   print("loop exited normally")
 
