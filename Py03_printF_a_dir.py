@@ -6,13 +6,13 @@
 ## dir = ls -lr
 import glob
 import os
-print("su tu v4-ok")
 
-os.chdir(r"c:\peg\z1drv\OneDrive\aaEgp_P2E2\1Drv\qqq_Prj\pp06_Jovian")
+os.chdir(r"..\JobsCzScraper")
 for file in glob.glob("*.py"):
   print(file)
 
-# formatnumber
+# Format Number
+print('\Format Number')
 num1 = 10_000_000_000.123
 num2 = 100_000_000.123
 total = num1 + num2

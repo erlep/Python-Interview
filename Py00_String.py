@@ -21,4 +21,11 @@ print(mystringliteral4)
 print(mystringliteral5)
 print(mystringliteral6)
 
+# Python  String
+s = 'Hi\nHello'
+print(s)
+# Python Raw String
+raw_s = r'Hi\nHello'
+print(raw_s)
+
 print("OkDone.")
