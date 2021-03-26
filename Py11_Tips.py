@@ -13,9 +13,11 @@ def square(x):
   ''' fce vraci ^2 '''
   return x*x
 # use list(map(
+print(' --- use list(map(')
 st = list(map(square, numbers))
 print(st)
 # use fce(x) for x in
+print(' --- use fce(x) for x in')
 st = [square(x) for x in numbers]
 print(st)
 
@@ -24,19 +26,23 @@ def is_odd(x):
   ''' fce vraci true pro liche resp ted je 'not' - sude '''
   return (bool(not(x % 2)))
 # list(filter(fce
+print('--- list(filter(fce')
 st = list(filter(is_odd, numbers))
 print(st)
 # x for x in xx if
+print('--- x for x in xx if')
 st = [x for x in numbers if is_odd(x)]
 print(st)
 
 # Format strings With f-Strings
+print('--- Format strings With f-Strings')
 def get_name_and_decades(name, age):
   return f"My name is {name} and I'm {age / 10:.5f} decades old."
 st = get_name_and_decades("Maria", 31)
 print(st)
 
 # Sort Complex Lists With sorted()
+print('--- Sort Complex Lists With sorted()')
 st = sorted(['cat', 'dog', 'cheetah', 'rhino', 'bear'], reverse=True)
 print(st)
 
@@ -56,10 +62,12 @@ print(st)
 # words.add(get_random_word())
 
 # Save Memory With Generators
+print('--- sum([i * i for i in range(1, 1001)])')
 st = sum([i * i for i in range(1, 1001)])
 print(st)
 
 # Define Default Values in Dictionaries With .get() and .setdefault()
+print('--- Define Default Values in Dictionaries With .get() and .setdefault()')
 cowboy = {'age': 32, 'horse': 'mustang', 'hat_size': 'large'}
 # Wrong
 if 'name' in cowboy:
@@ -69,6 +77,7 @@ else:
 st = name
 print(st)
 # Correct - use .get()
+print("--- get('name', 'The Man with No Name')")
 st = name = cowboy.get('name', 'The Man with No Name')
 print(st)
 st = cowboy
@@ -79,12 +88,14 @@ if 'name' not in cowboy:
 st = name = cowboy['name']
 print(st)
 # Correct use -  .setdefault()
+print('--- .setdefault()')
 st = name = cowboy.setdefault('name', 'The Man with No Name')
 print(st)
 st = cowboy
 print(st)
 
 # Handle Missing Dictionary Keys With collections.defaultdict()
+print('--- Handle Missing Dictionary Keys With collections.defaultdict()')
 grades = [
     ('elliot', 91),
     ('neelam', 89),
@@ -101,6 +112,7 @@ for name, grade in grades:
 st = student_grades
 print(st)
 # Correct use -  defaultdict(list)
+print('--- defaultdict(list)')
 student_grades = {}
 student_grades = defaultdict(list)
 for name, grade in grades:
@@ -109,6 +121,7 @@ st = student_grades
 print(st)
 
 # Count Hashable Objects With collections.Counter
+print('--- Count Hashable Objects With collections.Counter')
 words = "if there was there was but if \
 there was not there was not".split()
 print(words)
@@ -142,6 +155,7 @@ st = is_upper('LOL')
 print(st)
 
 # Generate Permutations and Combinations With itertools
+print('--- Permutations and Combinations')
 st = friends = ['Monique', 'Ashish', 'Devon', 'Bernie']
 print('friends\n', st)
 # permutations
@@ -150,3 +164,5 @@ print('permutations\n', st)
 # combinations
 st = list(itertools.combinations(friends, r=2))
 print('combinations\n', st)
+
+print('--- OkDone.')

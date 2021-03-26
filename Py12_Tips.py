@@ -3,12 +3,12 @@
 
 # Log-search Techniques - hledani pulenim intervalu
 def LogSearch():
-  arr, target = [1, 2, 3, 4, 5], 4
+  arr, target = [1, 2, 3, 4, 5], 3
   start, end = 0, len(arr)-1
   while start <= end:
     mid = int((start+end)/2)
     if arr[mid] == target:
-      return mid  # The value is found
+      return 'search for: ' + str(target) +'  position: ['+ str(mid) + '] -> value: ' + str(arr[mid])  # The value is found
     else:
       if arr[mid] < target:
         start = mid+1
@@ -16,7 +16,7 @@ def LogSearch():
         end = mid-1
   return -1  # The value is not found
 st = LogSearch()
-print(st)
+print('st: ', st)
 
 """
 Priklady jak List
@@ -57,14 +57,14 @@ arr[-1] # stack.peek()
 # loops
 counter = 0
 while counter <= 5:
-  print(counter)
+  print('counter: ', counter)
   counter += 1
 else:
   print("loop exited normally")
 # Output: 0 1 2 3 4 5 loop exited normally
 
 for i in range(5):
-  print(i)
+  print('i: ', i)
   if i > 3:
     break
 else:

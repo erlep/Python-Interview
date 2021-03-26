@@ -28,5 +28,27 @@ print('c=round(3.123456, 5) → ', c)
 c = pow(4, 3)
 print('c=pow(4, 3) → ', c)
 
+# Format Number - print(f"
+print('\Format Number')
+num1 = 10_000_000_000.123
+num2 = 100_000_000.123
+total = num1 + num2
+print(f"{total:,}")
+
+# PyFormat Using % and .format() for great good! - https://pyformat.info/
+# Formatted Output - https://is.gd/NQH5Bu
+print('\n Format number pi')
+pi = 3.141592653589793
+# old
+print('%f' % (pi))
+print('%.3f' % (pi))
+# new
+print('{:f}'.format(pi))
+print('{:.3f}'.format(pi))
+
+print(f"Number pi:{pi:,}")
+formatted_float = "Number pi: {:.3f}".format(pi)
+print(formatted_float)
+
 
 print("OkDone.")

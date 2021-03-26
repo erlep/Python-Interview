@@ -22,7 +22,6 @@ def group_by_owners(files):
       dct[nm].append(k)
     else:
       dct[nm] = [k]
-    print("this will execute")
   return dct
 if __name__ == "__main__":
   files = {

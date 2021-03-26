@@ -36,6 +36,10 @@
 #  c = {b: 1}     # Error
 
 # list tuple range dict set - list-tuple-range-dict-set
+# Lists    - [] - https://www.w3schools.com/python/python_lists_methods.asp
+# Tuples   - () - https://www.w3schools.com/python/python_tuples_methods.asp
+# Sets     - {} - https://www.w3schools.com/python/python_sets_methods.asp
+# Dictionaries - {"key":"value"} - https://www.w3schools.com/python/python_dictionaries_methods.asp
 
 # list
 print('\n list - x = ["apple", "banana", "cherry", "banana"]')
