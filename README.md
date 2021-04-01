@@ -1,4 +1,4 @@
-# Python-Interview v1.0b - from 18.03.2021 13:14
+# Python-Interview v1.01
 
 Preparing for a Python Interview
 
