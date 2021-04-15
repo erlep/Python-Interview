@@ -9,21 +9,23 @@ import glob
 import os
 
 # ----------------------------------------------------
-os.chdir(r"..\JobsCzScraper")
+print('\n\t for file in glob.glob("*.py"):')
+os.chdir(r'..\JobsCzScraper')
 for file in glob.glob("*.py"):
   print(file)
 print()
 # ----------------------------------------------------
+print('\n\t def print_directory_contents(sPath):')
 def print_directory_contents(sPath):
   """
-  This function takes the name of a directory 
-  and prints out the paths files within that 
-  directory as well as any files contained in 
-  contained directories. 
+  This function takes the name of a directory
+  and prints out the paths files within that
+  directory as well as any files contained in
+  contained directories.
 
   This function is similar to os.walk. Please don't
-  use os.walk in your answer. We are interested in your 
-  ability to work with nested structures. 
+  use os.walk in your answer. We are interested in your
+  ability to work with nested structures.
   """
   # print('sPath: ', sPath)
   for sChild in os.listdir(sPath):
