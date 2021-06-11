@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+'''
+This is Python 1st Hello world script
+
+## made by peg - https://GitHub.com/ErleP
+
+'''
+print(__doc__)
+
 # Python soubor
 
 # %% Odkaz 1 - umoznuje Run Cell Bellow
@@ -22,3 +32,6 @@ print(s)
 # %% Python Raw String
 raw_s = r'Hi\nHello'
 print(raw_s)
+
+# The End
+sys.exit()
