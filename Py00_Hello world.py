@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# import sys
+
 '''
 This is Python 1st Hello world script
 
@@ -34,4 +36,4 @@ raw_s = r'Hi\nHello'
 print(raw_s)
 
 # The End
-sys.exit()
+# sys.exit()
