@@ -17,6 +17,12 @@
 #  Set   - optimalizace na zjisteni zda obsahuje element         1     0       0
 #  Tuples have structure, lists have order
 
+# list tuple range dict set - list-tuple-range-dict-set
+# Lists    - [] - https://www.w3schools.com/python/python_lists_methods.asp
+# Tuples   - () - https://www.w3schools.com/python/python_tuples_methods.asp
+# Sets     - {} - https://www.w3schools.com/python/python_sets_methods.asp
+# Dictionaries - {"key":"value"} - https://www.w3schools.com/python/python_dictionaries_methods.asp
+
 #  # Size
 #  a = tuple(range(1000))
 #  b = list(range(1000))
@@ -35,38 +41,39 @@
 #  c = {a: 1}     # OK
 #  c = {b: 1}     # Error
 
-# list tuple range dict set - list-tuple-range-dict-set
-# Lists    - [] - https://www.w3schools.com/python/python_lists_methods.asp
-# Tuples   - () - https://www.w3schools.com/python/python_tuples_methods.asp
-# Sets     - {} - https://www.w3schools.com/python/python_sets_methods.asp
-# Dictionaries - {"key":"value"} - https://www.w3schools.com/python/python_dictionaries_methods.asp
 
-# list
+# list []
+x = ["cherry", "apple", "banana", "banana"]
 print('\n list - x = ["apple", "banana", "cherry", "banana"]')
-x = ["apple", "banana", "cherry", "banana"]
 print("x: ", x, " - type: ", type(x))
 print('for i in x:')
 for i in x:
   print(i)
 print('for i, fruit in enumerate(x):')
-for i, fruit in enumerate(x):
+for i, fruit in enumerate(x, start=11):
   print('i:', i, ' fruit:', fruit)
 
-# tuple
+
+# tuple ()
+x = ("cherry", "apple", "banana", "banana")
 print('\n tuple - x = ("apple", "banana", "cherry", "banana")')
-x = ("apple", "banana", "cherry", "banana")
 print("x: ", x, " - type: ", type(x))
 for i in x:
   print(i)
 
-# range
-print("\n range - x = range (3)")
-x = range(3)
+
+# set  {}
+x = {"cherry", "apple", "banana", "banana"}
+print('\n set - x = {"cherry", "apple", "banana", "banana"}')
 print("x: ", x, " - type: ", type(x))
 for i in x:
   print(i)
+# Optimalizace na rychlost
+obsahuje = "banana" in x
+print("Je tam banan?", obsahuje)
 
-# dict
+
+# dict  {:}
 print(
     '\n dict - x = {"name" : "John", "age" : 36, "Occupation" : "Teacher", "age" : 36}'
 )
@@ -75,11 +82,13 @@ print("x: ", x, " - type: ", type(x))
 for key, val in x.items():
   print("key:", key, "  val:", val)
 
-# set
-print('\n set - x = {"apple", "banana", "cherry", "banana"}')
-x = {"apple", "banana", "cherry", "banana"}
+
+# range
+print("\n range - x = range (3)")
+x = range(3)
 print("x: ", x, " - type: ", type(x))
 for i in x:
   print(i)
+
 
 print("\nOkDone.")

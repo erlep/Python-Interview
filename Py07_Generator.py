@@ -21,6 +21,7 @@ def fib(num):
 for item in fib(10):
   print(item)
 
+# Yield - yield is a keyword that is used like return, except the function will return a generator.
 # When to use yield instead of return in Python? - https://is.gd/JsKwnM
 # What does the “yield” keyword do? - https://is.gd/jOvX6E
 

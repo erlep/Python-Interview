@@ -39,4 +39,16 @@ print('       ',txt2)
 print('''txt3 = "My name is {}, I'm {}".format("John",36): ''')
 print('       ',txt3)
 
+
+# join strings
+words = ['book', 'car', 'plane', 'chair', 'floor']
+'''
+Desired output:
+book/car/plane/chair/floor
+'''
+print("words: ", words)
+output = '/'.join(words)
+print("join output: ", output)
+
+
 print("OkDone.")

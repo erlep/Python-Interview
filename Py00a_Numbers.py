@@ -11,9 +11,11 @@ print('b = 3: ', b)
 # deleni
 c = a / b
 print('c = a / b → ', c)
+
 # celociselne deleni
 c = a // b
 print('c = a // b → ', c)
+
 # zbytek
 c = a % b
 print('c = a % b → ', c)
@@ -29,7 +31,7 @@ c = pow(4, 3)
 print('c=pow(4, 3) → ', c)
 
 # Format Number - print(f"
-print('\Format Number')
+print('\n Format Number')
 num1 = 10_000_000_000.123
 num2 = 100_000_000.123
 total = num1 + num2

@@ -26,4 +26,15 @@ class Student(Person):
 p2 = Student("Mike", 22, "VUT")
 p2.print()
 
+
+class Absolvent(Student):
+  ''' class Absolvent(Student) '''
+  def __init__(self, name, age, school, prace):
+    # Person.__init__(self, name, age)
+    super().__init__(name, age, school)
+    self.prace = prace
+    self.msg = self.msg + " Ted pracuje v " + self.prace + "."
+p3 = Absolvent("Kazbunda", 44, "VUT", 'ABB')
+p3.print()
+
 print("OkDone.")

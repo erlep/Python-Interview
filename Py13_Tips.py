@@ -39,12 +39,12 @@ output = all([num % 2 == 0 for num in [2, 4, 6, 8, 10, 11]])
 print("07: ", output)
 
 
-# 08:  Please enter two integers er floats
+# 08:  Please enter two integers or floats
 def divide_numhere(num1, nun2):
   try:
     result = num1 / nun2
   except TypeError:
-    return "Please enter two integers er floats"
+    return "Please enter two integers or floats"
   except ZeroDivisionError:
     return "Can't divide by zero"
   return result

@@ -2,6 +2,7 @@
 # % Python How To - https://www.w3schools.com/python/python_howto_remove_duplicates.asp
 # Python Dictionaries - https://www.w3schools.com/python/python_dictionaries.asp
 print(' How to Remove Duplicates From a Python List')
+
 # How to Remove Duplicates From a Python List
 mylist = ["a", "b", "a", "c", "c"]
 mylist = list(dict.fromkeys(mylist))
@@ -12,6 +13,7 @@ def my_function(x):
   return list(dict.fromkeys(x))
 mylist = my_function(["a", "b", "a", "c", "c"])
 print(mylist)
+
 
 print('\n How to Reverse a String in Python')
 # How to Reverse a String in Python

@@ -6,6 +6,9 @@
 import math
 import time
 
+###############################################################################
+# toto je jen uvod, dekoratory nize
+###############################################################################
 # Treating the functions as objects.
 # Python program to illustrate functions can be treated as objects
 def shout(text):
@@ -40,8 +43,9 @@ print(add_15(10))
 print('OutPut: 25 \n')
 
 ###############################################################################
-# Decorator can modify the behavior:
+# toto je jen uvod, dekoratory nize
 ###############################################################################
+# Decorator can modify the behavior:
 # defining a decorator
 def hello_decorator(func):
   # inner1 is a Wrapper function in which the argument is called
@@ -62,6 +66,7 @@ function_to_be_used = hello_decorator(function_to_be_used)
 
 # calling the function
 function_to_be_used()
+
 
 ###############################################################################
 # the execution time of a function using a decorator.
