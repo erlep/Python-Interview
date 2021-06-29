@@ -9,7 +9,7 @@ my_list = list(range(1, 12))
 print("my_list: ", my_list, " - type: ", type(my_list))
 # Give me each number in the list squared
 squares = [num ** 2 for num in my_list if num % 2]
-print("squares: ", squares, " - type: ", type(squares))
+print("mocniny lichych: ", squares, " - type: ", type(squares))
 # Posun o +-1 suda / licha
 oJednu = [x + 1 if x % 2 else x-1 for x in my_list]
 print("oJednu: ", oJednu, " - type: ", type(oJednu))
@@ -20,13 +20,14 @@ my_list = [1, 2, 3, "text", 7, 10]
 # lepsi nez filter je radek niz
 # filtered = list(filter(lambda x: isinstance(x, int), my_list))
 filtered = [x for x in my_list if isinstance(x, int)]
-print("05: ", filtered)
+print("my_list:     ", my_list)
+print("jen typ int: ", filtered)
 
 
-# Projde list vezme jen co je <15, co vyhodi to si zapamatuje
+# Projde list co je >15, da do seznamu a nahradi cislem 15 
 # Algo: limit values greater than 15, memorizing of lost values.
 lst = [11, 18, 9, 12, 23, 4, 17]
-print('souce:', lst)
+print('source:', lst)
 lost = []
 for idx in range(len(lst)):
   val = lst[idx]
@@ -34,7 +35,7 @@ for idx in range(len(lst)):
     lost.append(val)
     lst[idx] = 15
 # Vysledek
-print("modif:", lst, "-lost(>15):", lost)
+print("modif: ", lst, "-lost(>15):", lost)
 
 
 # Najde v listu nejmensi schazejici cele cislo < 100 000
