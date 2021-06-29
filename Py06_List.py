@@ -2,7 +2,8 @@
 # % Preparing for a Python Interview: 10 Things You Should Know  https://youtu.be/DEwgZNC-KyE
 # Python 3 Cheat Sheet https://perso.limsi.fr/pointal/python:memento
 
-# 6 List how to use
+# List how to use
+# --------------------
 
 # my_list = [1,2,3,4,5,6,7,8,9,10]
 my_list = list(range(1, 12))
@@ -24,13 +25,12 @@ print("my_list:     ", my_list)
 print("jen typ int: ", filtered)
 
 
-# Projde list co je >15, da do seznamu a nahradi cislem 15 
+# Projde list co je >15, da do seznamu a nahradi cislem 15
 # Algo: limit values greater than 15, memorizing of lost values.
 lst = [11, 18, 9, 12, 23, 4, 17]
 print('source:', lst)
 lost = []
-for idx in range(len(lst)):
-  val = lst[idx]
+for idx, val in enumerate(lst):
   if val > 15:
     lost.append(val)
     lst[idx] = 15
@@ -102,4 +102,3 @@ A = [2, 2, 6, 5, 3, 0, 2, 11, 0, 2, -4, -5, -8, 1, 8, -9, -4, -7, -1, -8]
 print('\n  NajdiN a SeznamN')
 print('NajdiN:', NajdiN(A))
 print('SeznamN:', SeznamN(A))
-

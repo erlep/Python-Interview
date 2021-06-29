@@ -11,10 +11,10 @@ import time
 ###############################################################################
 # Treating the functions as objects.
 # Python program to illustrate functions can be treated as objects
-def shout(text):
+def shout1(text):
   return text.upper()
-print(shout('Hello'))
-yell = shout
+print(shout1('Hello'))
+yell = shout1
 print(yell('Hi'))
 print('')
 
@@ -47,7 +47,7 @@ print('OutPut: 25 \n')
 ###############################################################################
 # Decorator can modify the behavior:
 # defining a decorator
-def hello_decorator(func):
+def hello_decorator1(func):
   # inner1 is a Wrapper function in which the argument is called
   # inner function can access the outer local functions like in this case "func"
   def inner1():
@@ -62,7 +62,7 @@ def function_to_be_used():
   print("This is inside the function !!")
 
 # passing 'function_to_be_used' inside the decorator to control its behavior
-function_to_be_used = hello_decorator(function_to_be_used)
+function_to_be_used = hello_decorator1(function_to_be_used)
 
 # calling the function
 function_to_be_used()
