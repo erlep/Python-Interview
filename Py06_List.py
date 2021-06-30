@@ -14,6 +14,13 @@ print("mocniny lichych: ", squares, " - type: ", type(squares))
 # Posun o +-1 suda / licha
 oJednu = [x + 1 if x % 2 else x-1 for x in my_list]
 print("oJednu: ", oJednu, " - type: ", type(oJednu))
+# Jsou vsechny cisla suda
+suda = all([num % 2 == 0 for num in oJednu])
+print("Jsou vsechny cisla oJednu suda: ", suda)
+# Je nejake cislo sude
+suda = any([num % 2 == 0 for num in oJednu])
+print("Je nejake cislo sude oJednu suda: ", suda)
+
 
 # Vrat jen cisla
 # -------------------------------------------------------
@@ -22,8 +29,16 @@ my_list = [1, 2, 3, "text", 7, 10]
 # filtered = list(filter(lambda x: isinstance(x, int), my_list))
 filtered = [x for x in my_list if isinstance(x, int)]
 print("my_list:     ", my_list)
-print("jen typ int: ", filtered)
-
+print("jen typ int - filtered: ", filtered)
+# unpacking of sequence in item and list
+a, *b = filtered
+print('a, *b = filtered:', filtered)
+print('a:', a)
+print('b:', b)
+*a, b = filtered
+print('*a, b = filtered:', filtered)
+print('a:', a)
+print('b:', b)
 
 # Projde list co je >15, da do seznamu a nahradi cislem 15
 # Algo: limit values greater than 15, memorizing of lost values.
