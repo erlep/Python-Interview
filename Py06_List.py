@@ -47,10 +47,6 @@ def NajdiN(A):
   AA = [num for num in A if num > 0 and num <= 100_000]
   print('AA: ', AA)
 
-  # kdyz je AA prazdne
-  if len(AA) == 0:
-    return (1)
-
   # List na Set
   AA = set(AA)
   print('AA: ', AA)
@@ -95,6 +91,7 @@ def SeznamN(A):
 A = []
 A = [1]
 A = [1, 2, 3]
+A = [-2, 0, -3]
 A = [-4, 1, 3, 6, 4, 1, 2, 2000000, -5, -8, 2123456]
 A = [-4, -5, -8, 2123456, 1, 4, 2, 3, 6, 8, 4, 4, 8, 8]
 A = [2, 2, 6, 5, 3, 0, 2, 11, 0, 2, -4, -5, -8, 1, 8, -9, -4, -7, -1, -8]
