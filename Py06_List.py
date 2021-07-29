@@ -5,7 +5,7 @@
 # List how to use
 # --------------------
 
-# my_list = [1,2,3,4,5,6,7,8,9,10]
+# prirozena cisla  1,2 az 11
 my_list = list(range(1, 12))
 print("my_list: ", my_list, " - type: ", type(my_list))
 # Give me each number in the list squared
@@ -28,7 +28,7 @@ my_list = [1, 2, 3, "text", 7, 10]
 # lepsi nez filter je radek niz
 # filtered = list(filter(lambda x: isinstance(x, int), my_list))
 filtered = [x for x in my_list if isinstance(x, int)]
-print("my_list:     ", my_list)
+print("\nmy_list:     ", my_list)
 print("jen typ int - filtered: ", filtered)
 # unpacking of sequence in item and list
 a, *b = filtered
@@ -62,7 +62,7 @@ def NajdiN(A):
   AA = [num for num in A if num > 0 and num <= 100_000]
   print('AA: ', AA)
 
-  # List na Set
+  # Deduplikace - List na Set
   AA = set(AA)
   print('AA: ', AA)
 
@@ -86,7 +86,7 @@ def SeznamN(A):
   if len(AA) == 0:
     return (1)
 
-  # List na Set
+  # List na Set - deduplikace
   AA = set(AA)
   print('AA: ', AA)
 

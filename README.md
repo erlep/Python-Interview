@@ -1,4 +1,4 @@
-# Python-Interview v1.05
+# Python-Interview v1.06
 
 Preparing for a Python Interview
 

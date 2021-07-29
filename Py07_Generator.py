@@ -3,10 +3,10 @@
 
 # 7 Generators  CoreyMSchafer/code_snippets/Generators - https://is.gd/BDQHlf
 #  # Fibonacci Sequence - https://en.wikipedia.org/wiki/Fibonacci_number
-#  a, b = 0, 1
-#  for i in range(20):
-#    print( i, ': ',a )
-#    a,b = b, a+b
+# a, b = 0, 1
+# for i in range(21):
+#   print(i, ': ', a)
+#   a, b = b, a+b
 
 #  # Fibonacci Sequence - https://en.wikipedia.org/wiki/Fibonacci_number
 # Fibonacci Generator
