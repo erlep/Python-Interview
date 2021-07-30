@@ -16,8 +16,10 @@ class Fruit:
     # Comparing names and not weights:
     if self.name == x.name:
       print("Both are the same fruits")
+      return True
     else:
       print(self.name, "and", x.name, "are different fruits.")
+      return False
 
   # Overloading __str__() to use print(Fruit):
   def __str__(self):
@@ -30,8 +32,8 @@ a = Fruit(5, "Strawberry")
 b = Fruit(100, "Watermelon")
 c = Fruit(20, "Mango")
 d = Fruit(1)
-
-print('a, b, c, d  ', a, b, c, d)
-print('a + b + c + d  ', a + b + c+d)
+print('a, typeof(a) \n', a, type(a), '\n')
+print('a, b, c, d  \n', a, b, c, d)
+print('a + b + c + d  ', a+b+c+d)
 print('a + 5  ', a + 5)
 print('a == b  ', a == b)
