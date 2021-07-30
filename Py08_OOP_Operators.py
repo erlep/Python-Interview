@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # How to overload an operator in Python - https://tny.im/KYrsH
 
-
 class Fruit:
   def __init__(self, weight, name="none"):
     self.name = name
