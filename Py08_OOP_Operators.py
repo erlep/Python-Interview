@@ -28,10 +28,12 @@ class Fruit:
     else:
       return "Name: {0}, Weight: {1}\n".format(self.name, self.weight)
 
+# Fruit
 a = Fruit(5, "Strawberry")
 b = Fruit(100, "Watermelon")
 c = Fruit(20, "Mango")
 d = Fruit(1)
+# Fruit operations
 print('a, typeof(a) \n', a, type(a), '\n')
 print('a, b, c, d  \n', a, b, c, d)
 print('a + b + c + d  ', a+b+c+d)

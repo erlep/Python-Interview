@@ -7,21 +7,26 @@ def what_to_buy(item, *args, **kwargs):
   print("args:", args)
   print("kwargs:", kwargs)
   if 'store' in kwargs:
-    return f"Buy {item} in {kwargs['store' ]}"
+    return f"Buy {item} in {kwargs['store']}"
   else:
     return f"Buy {item} in any store"
-
   return item
 
 # Vysledek
 output = what_to_buy('Laptup', "argument", store="Best Buy")
 print("output: ", output)
-
+print()
 
 #############################################################
-# Default parametry
-def fct(x, y, z, *args, a=3, b=5, **kwargs):
-  return x + y + z + str(a) + str(b)
+# Default parametry, volitelne parametry
+def fct(x, y, z, *args, a=3, b=5, c='', **kwargs):
 
-vysl = fct('a', 'b', 'c', pokus='pokus')
+  if 'P' in args:
+    return 'Je tam P. Parametr pokus: ' + str(kwargs['pokus']) + '  ' + x + y + z + c + str(a) + c + str(b)
+  elif 'pokus' in kwargs:
+    return 'Parametr pokus: ' + str(kwargs['pokus']) + '  ' + x + y + z + c + str(a) + c + str(b)
+  else:
+    return x + y + z + c + str(a) + c + str(b)
+
+vysl = fct('x', 'y', 'z', 'P', pokus='MujPokus', b=22, a=11, c='-')
 print('vysl:', vysl)
