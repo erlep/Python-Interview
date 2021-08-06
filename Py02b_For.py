@@ -5,8 +5,6 @@
 #  "python.formatting.provider": "autopep8",
 #  "python.formatting.autopep8Args": ["--indent-size=2"]
 
-# 2b  for
-
 print("\t for in range() ====================")
 for i in range(1, 12, 2):
   if i >= 9:

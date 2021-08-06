@@ -2,8 +2,6 @@
 # % Preparing for a Python Interview: 10 Things You Should Know  https://youtu.be/DEwgZNC-KyE
 # https://www.codementor.io/@sheena/essential-python-interview-questions-du107ozr6
 
-# 3 use Python
-
 ## dir = ls -lr
 import glob
 import os
