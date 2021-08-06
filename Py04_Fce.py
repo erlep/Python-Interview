@@ -1,6 +1,17 @@
 # -*- coding: utf-8 -*-
 # Start a sample Python test without creating an account - https://blog.pyplane.com/tests
 
+# funkce c
+def c(a, b=None):
+  if b is None:
+    return 'jenom a: ' + str(a)
+  else:
+    return 'a: ' + str(a) + ' je tam take b: ' + str(b)
+# Vysledek
+print('c(1)', c(1))
+print('c(1, 2)', c(1, 2))
+print()
+
 # 06:  Buy Laptup in Best Buy
 def what_to_buy(item, *args, **kwargs):
   print("item:", item)
