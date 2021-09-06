@@ -40,7 +40,9 @@ class Matrix(object):
       # rucni zadani
       self.name = name
       self.width, self.height = self.wh()
-    elif type(mx) == Matrix:
+    # Lepsi je pouzit isinstance misto type()
+    # elif type(mx) == Matrix:
+    elif isinstance(mx, Matrix):
       # mx je Matrix
       self.name = name
       self.mx_rows = mx.mx_rows
@@ -52,6 +54,8 @@ class Matrix(object):
     if not(self.check()):
       s = '!!! Wrong Matrix! !!!'
       self.name = s
+      print(s)
+      raise ValueError(s)
 
   # definice pro '=='
   def __eq__(self, other):
@@ -82,17 +86,29 @@ class Matrix(object):
 
   # Matrix check
   def check(self):
-    # matice []  je OK
+    # matice [] kontola: Je OK?
     if self.mx_rows == []:
       return True
     # Nastaveni w,h
     self.height = len(self.mx_rows)
-    self.width = len(self.mx_rows[0])
-    # Kontrola
+    try:
+      self.width = len(self.mx_rows[0])
+    except:
+      # sirka matice = 0, pripad  [1, 2, 3]
+      self.mx_rows = [self.mx_rows]
+      self.height = len(self.mx_rows)
+      self.width = len(self.mx_rows[0])
+
+    # Kontrola na stejny pocet radku a sloupcu
     for i in self.rows():
+      # vsechny prvky matice stejny typ: int OR float
+      if not(all((type(t) == int) or (type(t) == float) for t in i)):
+        return False
+      # kontrola: width
       if len(i) != self.width:
         self.width = -1
         return False
+    # kontrola: height
     for i in self.columns():
       if len(i) != self.height:
         self.height = -1
@@ -108,9 +124,10 @@ class Matrix(object):
     A = (self)
     B = (x)
     if (A.width != B.height):
-      s = '   !!! Wrong Matrixes width != height !!!   A.w:' + str(A.width) + ' != B.h:' + str(B.height)
+      s = '!!! Wrong Matrixes width != height !!!   A.w:' + str(A.width) + ' != B.h:' + str(B.height)
       print(s)
-      return Matrix(s, [])
+      # return Matrix(s, [])
+      raise ValueError(s)
     # Nasobeni
     s = '__mul__'
     try:
@@ -179,17 +196,33 @@ if __name__ == '__main__':
   print(A)
   print(B)
 
-  # Result A x B
+  # Result Matrix A x B
   print('Result:')
   C = Matrix('C', A * B)
   print(C)
 
+  # Compare Matrix vs Matrix
   D = Matrix('D', [[7], [28], [37]])
   print(D)
   print('C == D ', C == D)
   print()
 
-  # List vs Matrix
-  L = [[7], [28], [37]]
-  print('List: ', L)
-  print('C == L ', C == L)
+  # Compare List vs Matrix
+  E = [[7], [28], [37]]
+  print('List: ', E)
+  print('C == E ', C == E)
+  print()
+
+  # Compare List vs Matrix
+  F = [[1], [2], [3]]
+  print('List: ', F)
+  print('C == F ', C == F)
+  print()
+
+  # Simple multiplication
+  G = A * B
+  print(G)
+
+  # Matice - Vektor
+  V = Matrix('V', [1, 2, 3])
+  print(V)
