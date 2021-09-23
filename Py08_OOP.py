@@ -42,5 +42,19 @@ print('isinstance(Person(), Person))  : ', isinstance(Person(), Person))  # retu
 print('type(Person()) == Person       : ', type(Person()) == Person)  # returns True
 print('isinstance(Student(), Person)  : ', isinstance(Student(), Person))  # returns True
 print('type(Student()) == Person      : ', type(Student()) == Person)  # returns False
+print()
+
+# Multiple Inheritance - https://bit.ly/3lQg5YX
+class Parent1:
+  x = 'x'
+class Parent2:
+  y = 'y'
+class Parent3:
+  z = 'z'
+class Kid(Parent1, Parent2, Parent3):
+  k = 'k'
+
+k = Kid()
+print('k.x:', k.x, '  k.y:', k.y, '  k.z:', k.z, '  k.k:', k.k)
 
 print("OkDone.")
