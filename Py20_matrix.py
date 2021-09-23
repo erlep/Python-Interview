@@ -207,6 +207,11 @@ if __name__ == '__main__':
   print('C == D ', C == D)
   print()
 
+  # Compare Matrix is Matrix
+  CC = C
+  print('CC is C ', CC is CC)
+  print()
+
   # Compare List vs Matrix
   E = [[7], [28], [37]]
   print('List: ', E)

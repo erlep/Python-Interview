@@ -60,7 +60,35 @@ def test_mx_multiple_8():
 ])
 @pytest.mark.skip(reason="regexes not supported yet")
 @pytest.mark.xfail
+@pytest.fixture
 '''
+
+@pytest.mark.parametrize("test_input, expected", [
+    (Matrix('A', [1, 2, 3]), [[1, 2, 3]]),
+    (Matrix('B', [4, 5, 6]), [[4, 5, 6]]),
+    (Matrix('C', [7, 8, 9]), [[7, 8, 9]]),
+])
+def test_mx_more_para(test_input, expected):
+  a = Matrix('', test_input)
+  print(a)
+  assert Matrix('', test_input) == expected
+
+@pytest.mark.skip(reason="string input not supported yet")
+def test_mx_string():
+  assert Matrix('A', [1, 2, 3]) == [[1, 2, 3]]
+
+@pytest.mark.xfail
+def test_mx_wrong_matrix():
+  assert Matrix('A', [[1, 2], [1, 2, 3], [1, 2]])
+
+@pytest.mark.xfail
+def test_divide_by_zero():
+  assert 1 / 0 == 1
+
+# @pytest.fixture - defined in conftest.py
+def test_print(capture_stdout):
+  print("hello")
+  assert capture_stdout["stdout"] == "hello\n"
 
 # Cases
 test_mx_multiple_1()
