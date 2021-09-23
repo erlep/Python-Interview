@@ -52,6 +52,16 @@ def test_mx_multiple_8():
   with pytest.raises(ValueError):
     C = A * B
 
+''' pytest - Decorator
+@pytest.mark.parametrize("test_input,expected", [
+    ('ll', LikeState.empty),
+    ('dd', LikeState.empty),
+    ('ddl', LikeState.liked),
+])
+@pytest.mark.skip(reason="regexes not supported yet")
+@pytest.mark.xfail
+'''
+
 # Cases
 test_mx_multiple_1()
 test_mx_multiple_2()

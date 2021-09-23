@@ -1,3 +1,6 @@
+# vscode - peg 17.09.2021 09:22
+.vscode
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
