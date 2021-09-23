@@ -41,3 +41,12 @@ def fct(x, y, z, *args, a=3, b=5, c='', **kwargs):
 
 vysl = fct('x', 'y', 'z', 'P', pokus='MujPokus', b=22, a=11, c='-')
 print('vysl:', vysl)
+print()
+
+#############################################################
+# -> syntax - Annotation for type of return value of function - https://bit.ly/3hWwKZF
+# Function definitions - https://bit.ly/3hZyiCp
+def float2int(x: float) -> int:
+  return int(x)
+
+print('float2int(3.14):', float2int(3.14))
