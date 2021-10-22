@@ -56,5 +56,13 @@ class Kid(Parent1, Parent2, Parent3):
 
 k = Kid()
 print('k.x:', k.x, '  k.y:', k.y, '  k.z:', k.z, '  k.k:', k.k)
+print()
 
+# dir() - vypis vlastnosti objektu
+# eval() - obsah promenne jako nazev
+# Using a string variable as a variable name - https://bit.ly/3nf3lfj
+for d in dir(absolvent):
+  # eval
+  t = eval('absolvent.' + d)
+  print('att:', d, '  val:', t)
 print("OkDone.")

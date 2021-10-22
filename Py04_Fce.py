@@ -49,4 +49,9 @@ print()
 def float2int(x: float) -> int:
   return int(x)
 
-print('float2int(3.14):', float2int(3.14))
+i = float2int(3.14)
+print('float2int(3.14):', i, '  type(i)', type(i))
+
+# promenna typu funkce
+MyFce = float2int
+print('MyFce(3.14):', MyFce(3.14))
