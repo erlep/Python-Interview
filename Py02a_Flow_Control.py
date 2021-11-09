@@ -4,6 +4,7 @@
 
 #  "python.formatting.provider": "autopep8",
 #  "python.formatting.autopep8Args": ["--indent-size=2"]
+import sys
 
 # Flow Control
 # -----------------------------------------------
@@ -80,5 +81,15 @@ def divide_numhere(num1, nun2):
 output = divide_numhere(5, '10')
 print("try - except output: ", output)
 
+# try - except - https://wiki.python.org/moin/HandlingExceptions
+# -----------------------------------------------
+print("\t try - except  - General ====================")
+# import sys
+(x, y) = (5, 0)
+try:
+  z = x/y
+except:  # catch *all* exceptions
+  e = sys.exc_info()[0]
+  print("Error: ",  e)
 
 print("OkDone.")

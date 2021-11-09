@@ -43,6 +43,7 @@ print()
 
 
 # Trim = .strip()
+print('Trim string = .strip() ')
 mezery = '    aa bb *** cc    '
 print('>>mezery<<  ', '>>' + mezery + '<<')
 print('>>mezery.strip()<<  ', '>>' + mezery.strip() + '<<')
@@ -68,5 +69,14 @@ print("carka: ", carka)
 # Split
 split = carka.split(",")
 print("split: ", split)
+
+# Display string multiple times - https://bit.ly/3H4aOqw
+print('-' * 8)
+
+# f-Strings - https://bit.ly/3H1a7yl
+name = "Pepa " + \
+    "Zdepa"
+age = 99
+print(f"Hello, {name}. You are {age}.")
 
 print("OkDone.")
