@@ -5,6 +5,13 @@ import datetime
 
 """ f-strings """
 
+def simple():
+  # f-Strings - https://bit.ly/3H1a7yl
+  name = "Pepa " + \
+      "Zdepa"
+  age = 99
+  print(f"Hello, {name}. You are {age}.")
+
 
 def equals_debugging():
   str_value = "other 🐶"
@@ -36,8 +43,8 @@ def formatting():
   nested_format = ".2f"
   print(f'{num_value:{nested_format}}')
 
-
 def main():
+  simple()
   equals_debugging()
   conversions()
   formatting()

@@ -94,3 +94,6 @@ if "key1" in d:
 
 if "nonexistent key" in d:
   print("this will not")
+
+# Pristup k dict
+print('d["key1"]:', d["key1"])
