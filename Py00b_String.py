@@ -79,4 +79,10 @@ name = "Pepa " + \
 age = 99
 print(f"Hello, {name}. You are {age}.")
 
+# format
+num_value = 123.45678
+str_value = '{:.2f}'.format(num_value)
+print (str_value)
+
+
 print("OkDone.")
