@@ -14,10 +14,10 @@ For example, for dictionary {'Input.txt': 'Randy','Code.py': 'Stan', 'Output.txt
 the group_by_owners function should return
 {'Randy':['Input.txt', 'Output.txt'], 'Stan': ['Code.py']}.
 '''
-def group_by_owners(files):
+def group_by_owners(fls):
   dct = {}
-  for k in files.keys():
-    nm = files[k]
+  for k in fls.keys():
+    nm = fls[k]
     if nm in dct:
       dct[nm].append(k)
     else:

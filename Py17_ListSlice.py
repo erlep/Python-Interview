@@ -40,7 +40,6 @@ print('lstA.index(40):', lstA.index(40))
 print('lstA.count(50):', lstA.count(50))
 
 
-
 # Prohozeni promenych
 a = 1
 b = 2
@@ -49,7 +48,6 @@ print('b:', b)
 a, b = b, a
 print('a:', a)
 print('b:', b)
-
 
 
 # unpacking of sequence in item and list
@@ -63,4 +61,3 @@ print('b:', b)
 print('*a, b = seq:', seq)
 print('a:', a)
 print('b:', b)
-

@@ -5,14 +5,12 @@
 class InfIter:
   """Infinite iterator to return all
       odd numbers"""
-
-  def __init__(self, max=0):
-    self.max = max
-
+  def __init__(self, maxi=0):
+    self.max = maxi
+    self.num = 0
   def __iter__(self):
     self.num = 1
     return self
-
   def __next__(self):
     if self.num <= self.max:
       self.num += 2

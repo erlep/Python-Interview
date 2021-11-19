@@ -9,8 +9,8 @@ mylist = list(dict.fromkeys(mylist))
 print(mylist)
 
 # Create a Function - How to Remove Duplicates From a Python List
-def my_function(x):
-  return list(dict.fromkeys(x))
+def my_function(MyList):
+  return list(dict.fromkeys(MyList))
 mylist = my_function(["a", "b", "a", "c", "c"])
 print(mylist)
 
@@ -97,3 +97,7 @@ if "nonexistent key" in d:
 
 # Pristup k dict
 print('d["key1"]:', d["key1"])
+
+# Hodnoty dict: prevod na str, spojeni do retezce
+values = ' '.join(str(v) for v in d.values())
+print(values, type(values))

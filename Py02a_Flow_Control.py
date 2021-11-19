@@ -34,7 +34,10 @@ i = 1
 while i <= 5:
   print(i)
   i += 1
-else:
+  # fix pylint - Else clause on loop without a break statement
+  if i > 5:
+    break
+else:  # no break
   print("loop exited normally")
 
 
@@ -88,8 +91,8 @@ print("\t try - except  - General ====================")
 (x, y) = (5, 0)
 try:
   z = x/y
-except:  # catch *all* exceptions
+except:  # catch *all* exceptions # pylint: disable=bare-except
   e = sys.exc_info()[0]
-  print("Error: ",  e)
+  print("Error: ", e)
 
 print("OkDone.")

@@ -75,9 +75,9 @@ print("Je tam banan?", obsahuje)
 
 # dict  {:}
 print(
-    '\n dict - x = {"name" : "John", "age" : 36, "Occupation" : "Teacher", "age" : 36}'
+    '\n x = {"name": "John", "age": 63, "Occupation": "Teacher", "experience": 36}'
 )
-x = {"name": "John", "age": 36, "Occupation": "Teacher", "age": 36}
+x = {"name": "John", "age": 63, "Occupation": "Teacher", "experience": 36}
 print("x: ", x, " - type: ", type(x))
 for key, val in x.items():
   print("key:", key, "  val:", val)

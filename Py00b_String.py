@@ -79,10 +79,15 @@ name = "Pepa " + \
 age = 99
 print(f"Hello, {name}. You are {age}.")
 
-# format
+# Format()
 num_value = 123.45678
 str_value = '{:.2f}'.format(num_value)
-print (str_value)
+print(str_value)
 
+# Check if variable is string - using isinstance() - https://bit.ly/3wPWGfS
+test_string = "GFG"
+print("The original string : " + str(test_string))
+res = isinstance(test_string, str)
+print("Is variable a string ? : " + str(res))
 
 print("OkDone.")

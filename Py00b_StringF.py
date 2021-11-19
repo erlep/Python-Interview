@@ -3,7 +3,7 @@
 
 import datetime
 
-""" f-strings """
+###  f-strings ###
 
 def simple():
   # f-Strings - https://bit.ly/3H1a7yl

@@ -73,8 +73,8 @@ print(st)
 # Format strings With f-Strings
 # -----------------------------------------------------
 print('--- Format strings With f-Strings')
-def get_name_and_decades(name, age):
-  return f"My name is {name} and I'm {age / 10:.5f} decades old."
+def get_name_and_decades(nm, age):
+  return f"My name is {nm} and I'm {age / 10:.5f} decades old."
 st = get_name_and_decades("Maria", 31)
 print(st)
 

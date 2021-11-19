@@ -55,11 +55,11 @@ print("modif: ", lst, "-lost(>15):", lost)
 
 # Najde v listu nejmensi schazejici cele cislo < 100 000
 # -------------------------------------------------------
-def NajdiN(A):
-  print('A: ', A)
+def NajdiN(aList):
+  print('A: ', aList)
 
   # prebrani jen cisel 1 az 1e5
-  AA = [num for num in A if num > 0 and num <= 100_000]
+  AA = [num for num in aList if num > 0 and num <= 100_000]
   print('AA: ', AA)
 
   # Deduplikace - List na Set
@@ -75,11 +75,11 @@ def NajdiN(A):
 
 # Vrati chybejici cisla v rade realnych cisel po to nejvetsi z listu
 # -------------------------------------------------------
-def SeznamN(A):
-  print('A: ', A)
+def SeznamN(aList):
+  print('A: ', aList)
 
   # prebrani jen cisel 1 az 1e5
-  AA = [num for num in A if num > 0 and num <= 100_000]
+  AA = [num for num in aList if num > 0 and num <= 100_000]
   print('AA: ', AA)
 
   # kdyz je AA prazdne

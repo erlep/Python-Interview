@@ -28,27 +28,28 @@ for item in fib(10):
 # Iterables
 print("\n List")
 mylist = [1, 2, 3]
-for i in mylist:
-  print(i)
+for val in mylist:
+  print(val)
 print("\n for .. in")
 print("Squares")
 mylist = [x * x for x in range(4)]
-for i in mylist:
-  print(i)
+for val in mylist:
+  print(val)
 
 # Generators
 print("\n Generators")
 mygenerator = (x * x for x in range(4))
-for i in mygenerator:
-  print(i)
+for val in mygenerator:
+  print(val)
 
 # Yield - yield is a keyword that is used like return, except the function will return a generator.
 print("\n Yield")
 def createGenerator(num):
-  mylist = range(num)
-  for i in mylist:
+  myRange = range(num)
+  for i in myRange:
     yield i * i
+
 mygenerator = createGenerator(4)  # create a generator
 print(mygenerator)  # mygenerator is an object!
-for i in mygenerator:
-  print(i)
+for val in mygenerator:
+  print(val)

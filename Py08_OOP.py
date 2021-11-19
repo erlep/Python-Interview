@@ -8,7 +8,7 @@ class Person:
     ''' konstruktor '''
     self.name = name
     self.age = age
-    self.msg = "Name is " + self.name + \
+    self.msg = 'Person: '+"Name is " + self.name + \
         ". He is " + str(self.age) + " years old."
   def print(self):
     ''' funkce print '''
@@ -22,10 +22,9 @@ class Student(Person):
     # Person.__init__(self, name, age)
     super().__init__(name, age)
     self.school = school
-    self.msg = self.msg + " Student of " + self.school + "."
+    self.msg = 'Student: '+self.msg + " Student of " + self.school + "."
 student = Student("Mike", 22, "VUT")
 student.print()
-
 
 class Absolvent(Student):
   ''' class Absolvent(Student) '''
@@ -33,7 +32,7 @@ class Absolvent(Student):
     # Person.__init__(self, name, age)
     super().__init__(name, age, school)
     self.prace = prace
-    self.msg = self.msg + " Ted pracuje v " + self.prace + "."
+    self.msg = 'Absolvent: '+self.msg + " Ted pracuje v " + self.prace + "."
 absolvent = Absolvent("Kazbunda", 44, "VUT", 'ABB')
 absolvent.print()
 
