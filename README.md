@@ -1,6 +1,6 @@
-# Python-Interview v1.20
+# Python-Interview v1.21
 
-Preparing for a Python Interview
+**Python** notes not only for Preparing for a Python Interview.
 
 Based on:
 Preparing for a Python Interview: 10 Things You Should Know <https://youtu.be/DEwgZNC-KyE>
