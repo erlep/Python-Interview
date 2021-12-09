@@ -4,6 +4,7 @@
 
 #  "python.formatting.provider": "autopep8",
 #  "python.formatting.autopep8Args": ["--indent-size=2"]
+from inspect import currentframe, getframeinfo
 import sys
 
 # Flow Control
@@ -94,5 +95,14 @@ try:
 except:  # catch *all* exceptions # pylint: disable=bare-except
   e = sys.exc_info()[0]
   print("Error: ", e)
+print()
+
+# filename and line number of Python script - https://bit.ly/307ZMjo
+# -----------------------------------------------
+print('filename and line number of Python script - Before Pos')
+frameinfo = getframeinfo(currentframe())
+print('File:', frameinfo.filename, '  Line:', frameinfo.lineno)
+print('After Pos')
+
 
 print("OkDone.")
