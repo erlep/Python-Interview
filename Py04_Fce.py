@@ -29,12 +29,12 @@ print()
 
 #############################################################
 # Default parametry, volitelne parametry
-print('def Fnc(a, b, c, d=4, e=5, f=6, *args, **kwargs):')
 def Fnc(a, b, c, d=4, e=5, f=6, *args, **kwargs):
   print("a:", a, "  b:", b, "  c:", c, "  d:", d, "  e:", e, "  f:", f,)
   print("args:", args)
   print("kwargs:", kwargs)
   return 'OkDone.'
+print('def Fnc(a, b, c, d=4, e=5, f=6, *args, **kwargs):')
 vysl = Fnc(1, 2, 3, 0, -1, -2, -3, -4, pokus='MujPokus', g=22, h=11, i='icko')
 print("Fnc:(vysl = Fnc(1,2,3,0,-1,-2,-3,-4, pokus='MujPokus', g=22, h=11, i='icko')):", vysl)
 print()
