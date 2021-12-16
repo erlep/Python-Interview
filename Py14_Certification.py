@@ -1,4 +1,4 @@
-# Artin test Python - void
+﻿# Artin test Python - void
 # https://www.codementor.io/@sheena/essential-python-interview-questions-du107ozr6
 # https://www.testdome.com/tests/python-online-test/45
 # Certification ID: https://app.testdome.com/cert/47a14b40dc6d43d4b6b9db7b355411ef

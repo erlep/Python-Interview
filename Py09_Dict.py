@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 # % Python How To - https://www.w3schools.com/python/python_howto_remove_duplicates.asp
 # Python Dictionaries - https://www.w3schools.com/python/python_dictionaries.asp
 print(' How to Remove Duplicates From a Python List')

@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 # How to overload an operator in Python - https://tny.im/KYrsH
 
 class Fruit:

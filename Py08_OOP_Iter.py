@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 # Python Iterators - https://bit.ly/3zTc4Za
 # dual iterator in one python object - https://bit.ly/3ldKDW4
 

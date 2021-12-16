@@ -1,4 +1,4 @@
-# Python f-strings can do more than you thought - https://youtu.be/BxUxX1Ku1EQ
+﻿# Python f-strings can do more than you thought - https://youtu.be/BxUxX1Ku1EQ
 # https://github.com/mCodingLLC/VideosSampleCode
 
 import datetime

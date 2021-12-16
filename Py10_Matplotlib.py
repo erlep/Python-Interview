@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 # https://www.w3schools.com/python/matplotlib_histograms.asp
 
 import matplotlib.pyplot as plt

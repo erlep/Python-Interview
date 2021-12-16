@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 # Start a sample Python test without creating an account - https://blog.pyplane.com/tests
 
 # Funkce se 2 paramery, b - nepovinne

@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 # How to Stand Out in a Python Coding Interview - https://is.gd/wDs2GS
 
 import itertools

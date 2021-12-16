@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 # Preparing for Programming interview with Python - https://is.gd/RfZHKP
 
 # Log-search Techniques - hledani pulenim intervalu

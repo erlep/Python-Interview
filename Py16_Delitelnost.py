@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 # % Preparing for a Python Interview: 10 Things You Should Know  https://youtu.be/DEwgZNC-KyE
 
 # 4 Common problems

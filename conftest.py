@@ -1,4 +1,4 @@
-# In pytest, what is the use of conftest.py files? - https://bit.ly/3EVB7yn
+﻿# In pytest, what is the use of conftest.py files? - https://bit.ly/3EVB7yn
 
 import pytest
 import sys

@@ -1,4 +1,4 @@
-#  # Fibonacci Sequence - https://en.wikipedia.org/wiki/Fibonacci_number
+﻿#  # Fibonacci Sequence - https://en.wikipedia.org/wiki/Fibonacci_number
 # Fibonacci Generator
 a, b = 0, 1
 for i in range(20):

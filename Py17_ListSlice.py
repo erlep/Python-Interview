@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 
 print('Sequence Containers Indexing - lst[start slice:end slice:step]')
 lst = [10, 20, 30, 40, 50]
