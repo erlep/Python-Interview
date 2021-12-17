@@ -70,6 +70,13 @@ condition = True
 x = 1 if condition else 0
 print(x)
 
+# if - value in a list
+# -----------------------------------------------
+print("\t if - value in a list  ====================")
+a = [4, 2, 3, 1, 5, 6]
+b = 5
+x = b in a
+print('b in a ', x)
 
 # try - except
 # -----------------------------------------------
