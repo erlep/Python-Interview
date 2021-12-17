@@ -1,4 +1,4 @@
-﻿# Python-Interview v1.27
+﻿# Python-Interview v1.28
 
 **Python** notes not only for Preparing for a Python Interview.
 

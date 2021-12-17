@@ -75,7 +75,7 @@ print('-' * 8)
 
 # f-Strings - https://bit.ly/3H1a7yl
 name = "Pepa " + \
-    "Zdepa"
+    "Zdepa"    # \ - code continue on next line
 age = 99
 print(f"Hello, {name}. You are {age}.")
 
