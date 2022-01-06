@@ -15,8 +15,22 @@ print(__doc__)
 # %% Odkaz 1 - umoznuje Run Cell Bellow
 print("Hello world")
 
+# %% string
+s = 'Hi\nHello'
+print(s)
+
+# %% Python Raw String
+raw_s = r'Hi\nHello'
+print(raw_s)
+
 # %% Odkaz 2 - umoznuje Run Cell Bellow
 print('OkDone.')
+print()
+
+# The End
+# sys.exit()
+
+# just 4 test follows
 
 # %% Odkaz 3 - umoznuje Run Cell Bellow
 print('Napsano v GitPod.io.')
@@ -26,14 +40,3 @@ print('Napsano na lokale.')
 
 # %% Odkaz 5 - umoznuje Run Cell Bellow
 print('Napsano v GitHub.com')
-
-# %% string
-s = 'Hi\nHello'
-print(s)
-
-# %% Python Raw String
-raw_s = r'Hi\nHello'
-print(raw_s)
-
-# The End
-# sys.exit()
