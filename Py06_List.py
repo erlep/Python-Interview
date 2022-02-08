@@ -114,3 +114,23 @@ A = [2, 2, 6, 5, 3, 0, 2, 11, 0, 2, -4, -5, -8, 1, 8, -9, -4, -7, -1, -8]
 print('\n  NajdiN a SeznamN')
 print('NajdiN:', NajdiN(A))
 print('SeznamN:', SeznamN(A))
+
+print('\n  vyhod nejmensi integer (pro stejne cisla to prvni)')
+def remove_smallest(arr):
+  # prvni hodnota
+  minValue = arr[0]
+  # najdi min hodnotu
+  for num in arr:
+    if num < minValue:
+      minValue = num
+  # shallow copy
+  newArr = arr[:]
+  # smaz min hodnotu
+  newArr.remove(minValue)
+  print(arr, ' => ', newArr)
+  return newArr
+
+a = remove_smallest([5, 3, 2, 1, 4])
+a = remove_smallest([1, 2, 3, 4, 5, 1])
+a = remove_smallest([2, 2, 1, 2, 1])
+a = remove_smallest([2])
