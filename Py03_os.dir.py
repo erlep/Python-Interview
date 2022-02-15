@@ -7,12 +7,14 @@ import glob
 import os
 
 # ----------------------------------------------------
+# jeden adresar
 print('\n\t for file in glob.glob("*.py"):')
 os.chdir(r'..\JobsCzScraper')
 for file in glob.glob("*.py"):
   print(file)
 print()
 # ----------------------------------------------------
+# podadresare
 print('\n\t def print_directory_contents(sPath):')
 def print_directory_contents(sPath):
   """
@@ -33,4 +35,15 @@ def print_directory_contents(sPath):
     else:
       print(sChildPath)
 print_directory_contents(r'..\JobsCzScraper')
+# ----------------------------------------------------
+# pomoci glob /**/
+def print_directory_contents_new(sPath):
+  # root_dir needs a trailing slash (i.e. /root/dir/)
+  for filename in glob.glob(sPath + r'/**/*.xlsx', recursive=True):
+    print(filename)
+# ----------------------------------------------------
+# file exist - https://bit.ly/3BfE77g
+import os.path
+os.path.isfile(fname)
+# ----------------------------------------------------
 # ----------------------------------------------------
