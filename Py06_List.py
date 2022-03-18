@@ -19,7 +19,7 @@ suda = all([num % 2 == 0 for num in oJednu])
 print("Jsou vsechny cisla oJednu suda: ", suda)
 # Je nejake cislo sude
 suda = any([num % 2 == 0 for num in oJednu])
-print("Je nejake cislo sude oJednu suda: ", suda)
+print("Je nejake cislo oJednu sude: ", suda)
 
 
 # Vrat jen cisla
@@ -73,7 +73,7 @@ def NajdiN(aList):
       return (i)
 
 
-# Vrati chybejici cisla v rade realnych cisel po to nejvetsi z listu
+# Vrati chybejici cisla v rade prirozenych cisel po to nejvetsi z listu
 # -------------------------------------------------------
 def SeznamN(aList):
   print('A: ', aList)
