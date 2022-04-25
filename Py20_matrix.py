@@ -30,6 +30,9 @@ height: 2
 37
 '''
 # Matrix class
+import string
+
+
 class Matrix(object):
   # constructor - name, matrix (list of lists)
   def __init__(self, name, mx=None):
@@ -151,7 +154,7 @@ class Matrix(object):
     return st
 
   # Enter Value
-  def value(self, Hlaska):
+  def value(self, Hlaska: string):
     try:
       val = int(input(Hlaska))
     except:
