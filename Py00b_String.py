@@ -90,4 +90,9 @@ print("The original string : " + str(test_string))
 res = isinstance(test_string, str)
 print("Is variable a string ? : " + str(res))
 
+# vars()
+name = "Pepa"
+age = 99
+print("Jmenuje se {name} a je mu {age} let.".format(**vars()))
+
 print("OkDone.")

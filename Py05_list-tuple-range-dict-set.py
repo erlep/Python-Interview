@@ -46,6 +46,10 @@
 x = ["cherry", "apple", "banana", "banana"]
 print('\n list - x = ["apple", "banana", "cherry", "banana"]')
 print("x: ", x, " - type: ", type(x))
+print(*x, sep='; ')
+print()
+
+
 print('for i in x:')
 for i in x:
   print(i)
