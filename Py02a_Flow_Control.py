@@ -111,5 +111,13 @@ frameinfo = getframeinfo(currentframe())
 print('File:', frameinfo.filename, '  Line:', frameinfo.lineno)
 print('After Pos')
 
+# Determine if variable is defined
+# myVar = 1
+if "myVar" in (locals() or globals()):
+  # `myVar` exists
+  print('myVar exists. Value:', myVar)
+else:
+  print("myVar DOESN'T exists.")
+
 
 print("OkDone.")
