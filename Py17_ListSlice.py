@@ -1,5 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
 
+import itertools
 print('Sequence Containers Indexing - lst[start slice:end slice:step]')
 lst = [10, 20, 30, 40, 50]
 print('lst:', lst)
@@ -61,3 +62,9 @@ print('b:', b)
 print('*a, b = seq:', seq)
 print('a:', a)
 print('b:', b)
+
+# Flatten the lists
+a = [[1, 2], [3, 4], [5, 6]]
+b = list(itertools.chain.from_iterable(a))
+print(a)
+print(b)  # [1, 2, 3, 4, 5, 6]
