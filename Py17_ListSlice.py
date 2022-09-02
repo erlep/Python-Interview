@@ -68,3 +68,9 @@ a = [[1, 2], [3, 4], [5, 6]]
 b = list(itertools.chain.from_iterable(a))
 print(a)
 print(b)  # [1, 2, 3, 4, 5, 6]
+
+# Detecting New Elements
+list1 = [14, 5, 6, 8, 11, 13]
+list2 = [14, 5, 8]
+new = list(set(list1) - set(list2))
+print(new)  # [11, 13, 6]
