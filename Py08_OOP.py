@@ -33,6 +33,10 @@ class Absolvent(Student):
     super().__init__(name, age, school)
     self.prace = prace
     self.msg = 'Absolvent: '+self.msg + " Ted pracuje v " + self.prace + "."
+  def print(self):
+    ''' funkce print pro Absolvent '''
+    print('  Specialni tisk pro absolventy.')
+    super().print()
 absolvent = Absolvent("Kazbunda", 44, "VUT", 'ABB')
 absolvent.print()
 
