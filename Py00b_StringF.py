@@ -12,6 +12,16 @@ def simple():
   age = 99
   print(f"Hello, {name}. You are {age}.")
 
+def padding():
+  for i in range(1, 4):
+    print(f'The number is {i:02}')
+  st = 'abc'
+  print(f'{st :_>12}')
+  print(f'{st :_<12}')
+  print(f'{st :12}')
+  print(f'{st :^12}')
+  x12 = 'x' * 12
+  print(f'{x12 :^12}')
 
 def equals_debugging():
   str_value = "other 🐶"
@@ -35,8 +45,8 @@ class MyClass:
 
 def formatting():
   num_value = 123.456
-  now = datetime.datetime.utcnow()
-  print(f'{now=:%Y-%m-%d}')
+  now = datetime.datetime.now()
+  print(f'{now=:%Y-%m-%d %H:%M:%S}')
   print(f'{num_value:.2f}')
   print(f'{MyClass():blah blah %%MYFORMAT%%}')
 
@@ -45,6 +55,7 @@ def formatting():
 
 def main():
   simple()
+  padding()
   equals_debugging()
   conversions()
   formatting()
