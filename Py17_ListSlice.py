@@ -5,6 +5,7 @@ print('Sequence Containers Indexing - lst[start slice:end slice:step]')
 lst = [10, 20, 30, 40, 50]
 print('lst:', lst)
 print('lst[:-1]', lst[:-1])
+# Reverse list by slicing
 print('lst[::-1]', lst[::-1])
 print('lst[1:3]', lst[1:3])
 print('lst[:3]', lst[:3])

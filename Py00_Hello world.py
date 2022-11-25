@@ -23,6 +23,10 @@ print(s)
 raw_s = r'Hi\nHello'
 print(raw_s)
 
+# %% print No New Line
+print('Part 1', end='')
+print(' and part two.')
+
 # %% Odkaz 2 - umoznuje Run Cell Bellow
 print('OkDone.')
 print()

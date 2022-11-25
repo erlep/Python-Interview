@@ -22,7 +22,7 @@ print()
 
 # This function accepts any number of arguments:
 def MultiArgumentFce(*argumenty):
-  print('  argumenty', argumenty, 'len(argumenty)', len(argumenty), 'type(argumenty)', type(argumenty))
+  print('  argumenty', argumenty, '  len(argumenty)', len(argumenty), '  type(argumenty)', type(argumenty))
   # for idx, val in enumerate(argumenty):
   #   print('idx', idx, 'val', val)
 print("MultiArgumentFce()", MultiArgumentFce())

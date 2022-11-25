@@ -63,6 +63,7 @@ print()
 
 # dir() - vypis vlastnosti objektu
 # eval() - obsah promenne jako nazev
+# print(dir(absolvent))
 # Using a string variable as a variable name - https://bit.ly/3nf3lfj
 for d in dir(absolvent):
   # eval

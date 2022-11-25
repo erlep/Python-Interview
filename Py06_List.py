@@ -5,22 +5,29 @@
 # List how to use
 # --------------------
 
-# prirozena cisla  1,2 az 11
+# prirozena cisla  1,2,3 az 11
 my_list = list(range(1, 12))
 print("my_list: ", my_list, " - type: ", type(my_list))
-# Give me each number in the list squared
+# unpack list
+print('Cisla z listu: ', *my_list, sep='; ')
+# Give me each odd number in the list squared
 squares = [num ** 2 for num in my_list if num % 2]
 print("mocniny lichych: ", squares, " - type: ", type(squares))
 # Posun o +-1 suda / licha
 oJednu = [x + 1 if x % 2 else x-1 for x in my_list]
 print("oJednu: ", oJednu, " - type: ", type(oJednu))
-# Jsou vsechny cisla suda
+# all - Jsou vsechny cisla suda
 suda = all([num % 2 == 0 for num in oJednu])
 print("Jsou vsechny cisla oJednu suda: ", suda)
-# Je nejake cislo sude
+# any - Je nejake cislo sude
 suda = any([num % 2 == 0 for num in oJednu])
 print("Je nejake cislo oJednu sude: ", suda)
 
+#  Number string to integer list
+user_input = '1 2 3 4 5 6'
+# my_list = list(map(int, user_input.split()))
+my_list = [int(x) for x in user_input.split()]
+print('Number string to integer list:', my_list)
 
 # Vrat jen cisla
 # -------------------------------------------------------
