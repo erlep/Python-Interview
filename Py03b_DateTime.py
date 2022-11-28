@@ -25,3 +25,7 @@ print(time.strftime("%#d.%m.'%y"))  # '#' no leading zero WIN
 # alias daysleft='python - c "import datetime;print((datetime.date(2022, 12, 31)-datetime.date.today()).days)"'
 # print('Days left in year: ', (datetime.date(2022, 12, 31)-datetime.date.today()).days)
 print('Days left in year: ', (datetime.date(int(time.strftime("%Y")), 12, 31)-datetime.date.today()).days)
+
+# now with time & datetime.datetime
+print('CZ format:', time.strftime("%d.%m.%Y %H:%M:%S"))
+print('CZ format:', datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S"))
