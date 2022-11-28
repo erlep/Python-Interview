@@ -22,7 +22,7 @@ print(*data)
 
 print('days left in year: ', end='')
 # import datetime; print((datetime.date(2022, 12, 23)-datetime.date.today()).days)
-print((datetime.date(2022, 12, 23)-datetime.date.today()).days)
+print((datetime.date(2022, 12, 31)-datetime.date.today()).days)
 # alias daysleft='python - c "import datetime;print((datetime.date(2022, 12, 23)-datetime.date.today()).days)"'
 
 print('reverse list by slicing: ')

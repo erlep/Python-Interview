@@ -21,6 +21,7 @@ print(time.strftime("%d.%m.'%y"))
 print(time.strftime("%#d.%m.'%y"))  # '#' no leading zero WIN
 
 # days left in year: '
-# import datetime; print((datetime.date(2022, 12, 23)-datetime.date.today()).days)
-print('Days left in year: ', (datetime.date(2022, 12, 23)-datetime.date.today()).days)
-# alias daysleft='python - c "import datetime;print((datetime.date(2022, 12, 23)-datetime.date.today()).days)"'
+# import datetime; print((datetime.date(2022, 12, 31)-datetime.date.today()).days)
+# alias daysleft='python - c "import datetime;print((datetime.date(2022, 12, 31)-datetime.date.today()).days)"'
+# print('Days left in year: ', (datetime.date(2022, 12, 31)-datetime.date.today()).days)
+print('Days left in year: ', (datetime.date(int(time.strftime("%Y")), 12, 31)-datetime.date.today()).days)
