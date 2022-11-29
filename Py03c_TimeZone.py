@@ -11,3 +11,8 @@ print('Europe/London', datetime.now(pytz.timezone('Europe/London')))  # you coul
 
 # now with TimeZone
 print('CZ format:', datetime.now(pytz.timezone('Europe/Amsterdam')).strftime("%d.%m.%Y %H:%M:%S"))
+
+# 4 testing
+bbTimeZone = 'Europe/Amsterdam'
+bbDateDMY = "%d.%m.%Y %H:%M"  # format casu
+print('CZ format:', datetime.now(pytz.timezone(bbTimeZone)).strftime(bbDateDMY))
