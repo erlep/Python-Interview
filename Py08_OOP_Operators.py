@@ -37,8 +37,8 @@ class Fruit:
 
   # __call__ enables to write classes where the instances behave like functions
   # __call__ in Python - https://www.geeksforgeeks.org/__call__-in-python/
-  def __call__(self, a, b):
-    self.weight += a + b
+  def __call__(self, weight_1, weight_2):
+    self.weight += weight_1 + weight_2
     return self.weight
 
 # Fruit
