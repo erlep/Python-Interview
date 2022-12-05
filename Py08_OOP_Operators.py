@@ -28,14 +28,29 @@ class Fruit:
     else:
       return "Name: {0}, Weight: {1}\n".format(self.name, self.weight)
 
+  # Overloading __repr__() to use print(repr(Fruit)):
+  def __repr__(self):
+    if self.name == "none":
+      return "repr: Weight: {0}\n".format(self.weight)
+    else:
+      return "repr: Name: {0}, Weight: {1}\n".format(self.name, self.weight)
+
+  # __call__ enables to write classes where the instances behave like functions
+  # __call__ in Python - https://www.geeksforgeeks.org/__call__-in-python/
+  def __call__(self, a, b):
+    self.weight += a + b
+    return self.weight
+
 # Fruit
 a = Fruit(5, "Strawberry")
 b = Fruit(100, "Watermelon")
 c = Fruit(20, "Mango")
 d = Fruit(1)
+
 # Fruit operations
-print('a, typeof(a) \n', a, type(a), '\n')
+print('a, repr(a), typeof(a) \n', a, repr(a), type(a), '\n')
 print('a, b, c, d  \n', a, b, c, d)
-print('a + b + c + d  ', a+b+c+d)
-print('a + 5  ', a + 5)
-print('a == b  ', a == b)
+print('a + b + c + d ', a+b+c+d, '\n')
+print('a + 5 ', a + 5, '\n')
+print('a == b ', a == b, '\n')
+print('d(2,3) returns 6 (1+2+3): ', d(2, 3), '\n')  # 6=1+2+3
