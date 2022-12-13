@@ -12,46 +12,7 @@ print(mylist)
 def my_function(MyList):
   return list(dict.fromkeys(MyList))
 mylist = my_function(["a", "b", "a", "c", "c"])
-print(mylist)
-
-
-print('\n How to Reverse a String in Python')
-# How to Reverse a String in Python
-txt = "Hello World"[::-1]
-print(txt)
-
-# Python - Slicing Strings - https://www.w3schools.com/python/python_strings_slicing.asp
-print('txt = "Hello World"')
-txt = "Hello World"
-print(txt)
-
-# Get the characters from position 1 to position 3 (not included):
-print('txt = "Hello World"[1:3]')
-txt = "Hello World"[1:3]
-print(txt)
-
-# Slice From the Start
-print('txt = "Hello World"[:4]')
-txt = "Hello World"[:4]
-print(txt)
-
-# Slice To the End
-print('txt = "Hello World"[2:]')
-txt = "Hello World"[2:]
-print(txt)
-
-# Negative Indexing
-print('txt = "Hello World"[-3:-1]')
-txt = "Hello World"[-3:-1]
-print(txt)
-
-txt = "0123456789ABCDEF"
-print(txt)
-
-# od -3 zprava po 2
-print('txt = "0123456789ABCDEF"[-3::-2]')
-txt = "0123456789ABCDEF"[-3::-2]
-print(txt)
+print(mylist, '\n')
 
 # Python Dictionaries - https://www.w3schools.com/python/python_dictionaries.asp
 # Python Dictionary Methods - https://www.w3schools.com/python/python_dictionaries_methods.asp
@@ -60,7 +21,7 @@ car = {
     "model": "Mustang",
     "year": 1964
 }
-print('\n dict: ', car)
+print('dict car: ', car)
 print('len(car): ', len(car))
 print('car["model"]', car["model"])
 
@@ -69,21 +30,23 @@ x = car.keys()
 print('car.keys()', car.keys())
 # add
 car["color"] = "white"
-print('after car["color"] = "white"', x)
+print('car["color"] = "white" => after "year" new value "color" ', x)
 print(x)  # after the change
 # values
 x = car.values()
-print('car.values()', car.values())
+print('car.values() ', car.values())
 # items
 x = car.items()
-print('car.items()', car.items())
+print('car.items() ', car.items())
 # Check if Key Exists
 if "model" in car:
   print("Yes, 'model' is one of the keys in the thisdict dictionary")
 # Loop - items
+print('\t for x in car.items():')
 for x in car.items():
   print(x)
 # Loop - items
+print('\n\t for x in car.keys():')
 for x in car.keys():
   print(x, ':', car[x])
 

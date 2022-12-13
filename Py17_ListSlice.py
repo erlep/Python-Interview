@@ -40,7 +40,7 @@ print('lstA:', lstA)
 print('lstA.index(40):', lstA.index(40))
 # Vyskyt
 print('lstA.count(50):', lstA.count(50))
-
+print()
 
 # Prohozeni promenych
 a = 1
@@ -50,7 +50,7 @@ print('b:', b)
 a, b = b, a
 print('a:', a)
 print('b:', b)
-
+print()
 
 # unpacking of sequence in item and list
 seq = [11, 12, 13, 14]
@@ -72,6 +72,22 @@ print(b)  # [1, 2, 3, 4, 5, 6]
 
 # Detecting New Elements
 list1 = [14, 5, 6, 8, 11, 13]
-list2 = [14, 5, 8]
+list2 = [8, 5, 14]
 new = list(set(list1) - set(list2))
 print(new)  # [11, 13, 6]
+print()
+
+# slice for strings
+# Python - Slicing Strings - https://www.w3schools.com/python/python_strings_slicing.asp
+print('txt = "Hello World"')
+txt = "Hello World"
+print(txt)
+print('\n How to Reverse a String in Python')
+# How to Reverse a String in Python
+print('txt = "Hello World"[::-1]')
+txt = "Hello World"[::-1]
+print(txt)
+# Get the characters from position 1 to position 3 (not included):
+print('txt = "Hello World"[1:3]')
+txt = "Hello World"[1:3]
+print(txt)
