@@ -1,10 +1,10 @@
 ﻿# -*- coding: utf-8 -*-
 # Python Iterators - https://bit.ly/3zTc4Za
 # dual iterator in one python object - https://bit.ly/3ldKDW4
+# https://www.w3schools.com/python/gloss_python_iterator_stop.asp
 
 class InfIter:
-  """Infinite iterator to return all
-      odd numbers"""
+  """Infinite iterator to return all  odd numbers"""
   def __init__(self, maxi=0):
     self.max = maxi
     self.num = 0
@@ -13,8 +13,9 @@ class InfIter:
     return self
   def __next__(self):
     if self.num <= self.max:
+      num = self.num
       self.num += 2
-      return self.num
+      return num
     else:
       raise StopIteration
 
@@ -23,15 +24,13 @@ class InfIter:
     return "InfIter: {0}".format(self.num)
 
 a = iter(InfIter(20))
-print(a)
+print(a)  # InfIter: 1
 next(a)
-print(a)
-print(next(a))
-print(next(a))
-print(next(a))
-print(next(a))
-print(next(a))
+print(a)  # InfIter: 3
+print(next(a))  # 3
+print(next(a))  # 5
+print(next(a))  # 7
 
 print('\n  For Loop')
-for i in a:
-  print(i)
+for i, j in enumerate(InfIter(10)):
+  print(i, ': ', j)
