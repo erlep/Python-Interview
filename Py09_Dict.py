@@ -47,7 +47,8 @@ for x in car.items():
   print(x)
 # Loop - items
 print('\n\t for x in car.keys():')
-for x in car.keys():
+# for x in car.keys(): # possible write withou .keys():
+for x in car:
   print(x, ':', car[x])
 
 # Check if a given key already exists in a dictionary - https://is.gd/kXr8Pu
