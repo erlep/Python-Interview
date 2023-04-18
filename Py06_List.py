@@ -4,6 +4,12 @@
 
 # List how to use
 # --------------------
+a = [1, 2, 3]
+print(a, ': ', type(a))
+
+b = [a]
+print(b, ': ', type(b))
+print('*b: ', *b, ': ', type(*b))
 
 # prirozena cisla  1,2,3 az 11
 my_list = list(range(1, 12))
@@ -28,6 +34,10 @@ user_input = '1 2 3 4 5 6'
 # my_list = list(map(int, user_input.split()))
 my_list = [int(x) for x in user_input.split()]
 print('Number string to integer list:', my_list)
+
+# vsechny typ int nebo float
+m = [1, 2.2, 3, 4, 5, 6, 7, 8.81234567890001]
+print('all numbers: ', all((type(t) == int) or (type(t) == float) for t in m))
 
 # Vrat jen cisla
 # -------------------------------------------------------

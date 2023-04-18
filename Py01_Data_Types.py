@@ -10,10 +10,15 @@ print("x: ", x, " - type: ", type(x))
 # int
 x = 3
 print("x: ", x, " - type: ", type(x))
+# int hex
+x = 0x10
+print("x: ", x, " - type: ", type(x))
+# string
+x = '3.14'
+print("x: '", x, "' - type: ", type(x))
 # float
 x = 3.14
 print("x: ", x, " - type: ", type(x))
-
 # list
 x = ["apple", "banana", "cherry"]
 print("x: ", x, " - type: ", type(x))

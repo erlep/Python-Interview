@@ -1,5 +1,5 @@
+#!python3
 #!/custom/tools/wrappers/lang/python
-
 #!/custom/tools/lang/release7/python3.10.6/bin/python
 #!/custom/tools/lang/release7/python3.9.0/bin/python
 #!/custom/tools/lang/release7/python3.6.5/bin/python

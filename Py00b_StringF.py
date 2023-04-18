@@ -1,7 +1,13 @@
-﻿# Python f-strings can do more than you thought - https://youtu.be/BxUxX1Ku1EQ
+﻿#!python3
+# Python f-strings can do more than you thought - https://youtu.be/BxUxX1Ku1EQ
 # https://github.com/mCodingLLC/VideosSampleCode
 
 import datetime
+import io
+import sys
+
+sys.stdin = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8")
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 ###  f-strings ###
 
