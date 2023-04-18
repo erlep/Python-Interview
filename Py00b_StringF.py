@@ -59,12 +59,23 @@ def formatting():
   nested_format = ".2f"
   print(f'{num_value:{nested_format}}')
 
+# String Formatting Comparison - https://bit.ly/3Lb7JcA
+def Example():
+  from string import Template
+  name = "FINXTERS!"
+  print('1. Hello %s' % name)
+  print('2. Hello {}'.format(name))
+  print(f"3. Hello {name}")
+  temp = Template("4. Hello $name")
+  print(temp.substitute(name=name))
+
 def main():
   simple()
   padding()
   equals_debugging()
   conversions()
   formatting()
+  Example()
 
 if __name__ == '__main__':
   main()
