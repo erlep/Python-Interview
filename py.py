@@ -1,4 +1,12 @@
-#!python3
+#!/usr/bin/env python
+
+#  ===============================================
+#   Python template file - Shebang Notation
+#  ===============================================
+
+# Shebang Notation: Python Scripts on Windows and Linux? - https://bit.ly/41UPRb8
+
+#  ===============================================
 #!/custom/tools/wrappers/lang/python
 #!/custom/tools/lang/release7/python3.10.6/bin/python
 #!/custom/tools/lang/release7/python3.9.0/bin/python
@@ -11,9 +19,8 @@
 # -*- coding: utf-8 -*-
 
 # Information about python interpreter
-
-# To check your Python verson inside a script use:
 import sys
+# To check your Python verson inside a script use:
 print(sys.version)
 print('')
 
@@ -23,7 +30,7 @@ print('Cmd line:')
 for args in sys.argv:
   print(args, end=' ')
 
-print('konec')
+print('\nKonec')
 
 
 # Output:
