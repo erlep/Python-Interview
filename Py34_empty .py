@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+﻿#!/usr/bin/env python
 
 # Ukázka pro Anika - https://www.online-python.com
 
@@ -14,6 +14,6 @@
 i = 1
 while i < 6:
   print(i)
-   if i == 3:
-      break
-    i += 1
+  if i == 3:
+    break
+  i += 1

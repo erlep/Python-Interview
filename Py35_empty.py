@@ -1,4 +1,6 @@
-﻿#!python
+﻿#!/usr/bin/env python
+
+# Ukázka pro Paju
 
 # n = 4
 # for p in range(n):
