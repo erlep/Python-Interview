@@ -7,7 +7,18 @@ import re
 # example code:
 my_string = '1   2        3   '
 
+# match
 parsed = re.match(r"(\d)\s+(\d)\s+(\d)", my_string)
+print('parsed:', parsed)
+if parsed:
+  print('RegEx nula: >>', parsed[0], '<<')
+  print('RegEx jedna', parsed[1], '  dva', parsed[2], '  tri', parsed[3])
+else:
+  print('Nic nenasel.')
+print()
+
+# search
+parsed = re.search(r"(\d)\s+(\d)\s+(\d)", my_string)
 print('parsed:', parsed)
 if parsed:
   print('RegEx nula: >>', parsed[0], '<<')
