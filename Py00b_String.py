@@ -95,4 +95,10 @@ name = "Pepa"
 age = 99
 print("Jmenuje se {name} a je mu {age} let.".format(**vars()))
 
+# padding - zarovnani
+s = 'abc'
+print(s.ljust(9, "_"))
+print(s.rjust(9, "_"))
+print(s.center(9, "_"))
+
 print("OkDone.")
