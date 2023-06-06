@@ -30,10 +30,16 @@ suda = any([num % 2 == 0 for num in oJednu])
 print("Je nejake cislo oJednu sude: ", suda)
 
 #  Number string to integer list
-user_input = '1 2 3 4 5 6'
+user_input = '0 1 2 3 4 5 6'
 # my_list = list(map(int, user_input.split()))
 my_list = [int(x) for x in user_input.split()]
-print('Number string to integer list:', my_list)
+print('\nNumber string to integer list:', my_list)
+# del my_list[3]
+my_list.pop(3)
+print('my_list:', my_list)
+# insert at my_list[3] list 'a'
+my_list[3:3] = a
+print('my_list:', my_list)
 
 # vsechny typ int nebo float
 m = [1, 2.2, 3, 4, 5, 6, 7, 8.81234567890001]
