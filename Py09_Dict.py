@@ -1,67 +1,39 @@
 ﻿# -*- coding: utf-8 -*-
 # % Python How To - https://www.w3schools.com/python/python_howto_remove_duplicates.asp
 # Python Dictionaries - https://www.w3schools.com/python/python_dictionaries.asp
-print(' How to Remove Duplicates From a Python List')
 
-# How to Remove Duplicates From a Python List
-mylist = ["a", "b", "a", "c", "c"]
-mylist = list(dict.fromkeys(mylist))
-print(mylist)
+# Python Dictionary - https://bit.ly/3MPQkWd
 
-# Create a Function - How to Remove Duplicates From a Python List
-def my_function(MyList):
-  return list(dict.fromkeys(MyList))
-mylist = my_function(["a", "b", "a", "c", "c"])
-print(mylist, '\n')
+# dictionary with keys and values of different data types
+numbers = {1: "One", 2: "Two", 3: "Three"}
+print(numbers, '\n  len(numbers)',len(numbers),'\n  type(numbers)',type(numbers))
 
-# Python Dictionaries - https://www.w3schools.com/python/python_dictionaries.asp
-# Python Dictionary Methods - https://www.w3schools.com/python/python_dictionaries_methods.asp
-car = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
-print('dict car: ', car)
-print('len(car): ', len(car))
-print('car["model"]', car["model"])
+# Accessing Elements from Dictionary
+print('numbers[2]:', numbers[2])
 
-# keys
-x = car.keys()
-print('car.keys()', car.keys())
-# add
-car["color"] = "white"
-print('car["color"] = "white" => after "year" new value "color" ', x)
-print(x)  # after the change
-# values
-x = car.values()
-print('car.values() ', car.values())
+# Add Elements to a Python Dictionary
+numbers[0] = 'Zero'
+print(numbers)
+
+# Removing elements from Dictionary
+del numbers[2]
+print(numbers)
+
+# Membership Test for Dictionary Keys
+print('1 in numbers: ',1 in numbers) # prints True
+print('2 in numbers: ',2 in numbers) # prints False
+
+# Iterating through a Dictionary
+for i in numbers:
+  print(i, ':',numbers[i])
+
+# keys()
+print('numbers.keys():   ', numbers.keys(), type(numbers.keys()))
+# values()
+print('numbers.values(): ', numbers.values(), type(numbers.values()))
 # items
-x = car.items()
-print('car.items() ', car.items())
-# Check if Key Exists
-if "model" in car:
-  print("Yes, 'model' is one of the keys in the thisdict dictionary")
-# Loop - items
-print('\t for x in car.items():')
-for x in car.items():
-  print(x)
-# Loop - items
-print('\n\t for x in car.keys():')
-# for x in car.keys(): # possible write withou .keys():
-for x in car:
-  print(x, ':', car[x])
+print('numbers.items():  ', numbers.items(), type(numbers.items()))
 
-# Check if a given key already exists in a dictionary - https://is.gd/kXr8Pu
-d = {"key1": 10, "key2": 23}
-if "key1" in d:
-  print("this will execute")
-
-if "nonexistent key" in d:
-  print("this will not")
-
-# Pristup k dict
-print('d["key1"]:', d["key1"])
-
-# Hodnoty dict: prevod na str, spojeni do retezce
-values = ' '.join(str(v) for v in d.values())
-print(values, type(values))
+# sorted()	Return a new sorted list of keys in the dictionary.
+b = sorted(numbers)
+print (b, type(b))
