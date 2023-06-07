@@ -14,7 +14,7 @@ for inp in aInp:
     val = inp
   elif isinstance(inp, float):
     # string
-    print('neni spravna hodnota')
+    print(inp, 'neni spravna hodnota: ', end='')
     val = 0
   elif isinstance(inp, str):
     # string
@@ -27,7 +27,7 @@ for inp in aInp:
         # string int
         val = int(inp, 16)
       except ValueError:
-        print('neni spravna hodnota')
+        print(inp, 'neni spravna hodnota: ', end='')
         val = 0
 
   print('inp', inp, '  val', val, type(val))
