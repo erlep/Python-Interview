@@ -17,6 +17,7 @@ def simple():
       "Zdepa"
   age = 99
   print(f"Hello, {name}. You are {age}.")
+  print()
 
 def padding():
   for i in range(1, 4):
@@ -28,6 +29,7 @@ def padding():
   print(f'{st :^12}')
   x12 = 'x' * 12
   print(f'{x12 :^12}')
+  print()
 
 def equals_debugging():
   str_value = "other 🐶"
@@ -35,13 +37,13 @@ def equals_debugging():
   print(f'the value is {str_value}')
   print(f'{num_value = }')
   print(f'{num_value % 2 = }')
-
+  print()
 
 def conversions():
   str_value = "other 🐶"
   print(f'{str_value!s}')
   print(f'{str_value!r}')
-
+  print()
 
 class MyClass:
   def __format__(self, format_spec) -> str:
@@ -58,16 +60,24 @@ def formatting():
 
   nested_format = ".2f"
   print(f'{num_value:{nested_format}}')
+  print()
 
 # String Formatting Comparison - https://bit.ly/3Lb7JcA
 def Example():
   from string import Template
   name = "FINXTERS!"
+  print('0. Hello', name)
   print('1. Hello %s' % name)
   print('2. Hello {}'.format(name))
   print(f"3. Hello {name}")
   temp = Template("4. Hello $name")
   print(temp.substitute(name=name))
+
+  # The ** operator does something similar, but with keyword arguments
+  date_info = {'year': "2020", 'month': "01", 'day': "01"}
+  filename = "{year}-{month}-{day}.txt".format(**date_info)
+  print('filename = "{year}-{month}-{day}.txt".format(**date_info)', filename)
+  print()
 
 def main():
   simple()
