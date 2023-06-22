@@ -79,6 +79,11 @@ def Example():
   print('filename = "{year}-{month}-{day}.txt".format(**date_info)', filename)
   print()
 
+  # floats to two decimal points
+  print('%.2f' % 3.141592)
+  print('%.2f' % 3.141592, ' a druhe cislo je %.3f ' %  1.2345678)
+  print()
+
 def main():
   simple()
   padding()
