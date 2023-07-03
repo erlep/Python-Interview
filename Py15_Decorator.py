@@ -26,4 +26,3 @@ print(add(6, 9))
 print(add(3, 4))
 print(add(6, 9))
 print(add(6, 9))
-

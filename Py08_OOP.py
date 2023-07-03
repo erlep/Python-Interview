@@ -13,7 +13,7 @@ class Person:
   def print(self):
     ''' funkce print '''
     print(self.msg)
-person = Person("John", 36)
+person = Person("John", '36')
 person.print()
 
 class Student(Person):
@@ -23,7 +23,7 @@ class Student(Person):
     super().__init__(name, age)
     self.school = school
     self.msg = 'Student: '+self.msg + " Student of " + self.school + "."
-student = Student("Mike", 22, "VUT")
+student = Student("Mike", '22', "VUT")
 student.print()
 
 class Absolvent(Student):
@@ -37,7 +37,7 @@ class Absolvent(Student):
     ''' funkce print pro Absolvent '''
     print('  Specialni tisk pro absolventy.')
     super().print()
-absolvent = Absolvent("Kazbunda", 44, "VUT", 'ABB')
+absolvent = Absolvent("Kazbunda", '44', "VUT", 'ABB')
 absolvent.print()
 
 # Difference between type() and isinstance() - https://bit.ly/3yN3ZV7

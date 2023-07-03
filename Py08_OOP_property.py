@@ -57,5 +57,5 @@ for val in s:
 
 print(list(s))
 print(tuple(s))
-name, shares, price = s
-print('name, shares, price ',name, shares, price )
+my_name, my_shares, my_price = s
+print('name, shares, price ',my_name, my_shares, my_price )

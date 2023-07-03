@@ -41,13 +41,13 @@ print()
 
 # split
 txt = "The rain in Spain"
-x = re.split("\s", txt)
+x = re.split(r"\s", txt)
 print('Split: \n',x, '\n',type(x))
 print()
 
 # sub
 txt = "The rain in Spain"
-x = re.sub("\s", "_", txt)
+x = re.sub(r"\s", "_", txt)
 print('sub: \n',x, '\n',type(x))
 print()
 

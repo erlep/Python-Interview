@@ -23,4 +23,3 @@ print()
 for x in f:
   print(x, end=' ')
 print()
-

@@ -37,11 +37,11 @@ try:
   logger.info('Start')
   possibly_exploding_code()
 except IndexError as e:
-  logger.error( 'Not enough data '+str(e))
+  logger.error('Not enough data %s', e)
 except TypeError as e:
-  logger.error( 'Wrong data '+str(e))
+  logger.error('Wrong data %s', e)
 except ValueError as e:
-  logger.error( 'Data out of bounds '+str(e))
+  logger.error('Data out of bounds %s', e)
 else:
   logger.info('Success')
 finally:

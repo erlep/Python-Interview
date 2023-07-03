@@ -9,7 +9,6 @@
 # @wraps: This decorator is used to wrap a function or method and preserve its metadata such as its name, docstring and signature.
 # @lru_cache: This decorator is used to cache the result of a function call with a limited size cache. It can significantly improve the performance of functions that are called frequently with the same arguments.
 
-
 # ==============================================================================
 # calculate function execution time
 import functools
@@ -50,7 +49,7 @@ def count_calls(func):
 
 @count_calls
 def say():
-    print("Hello!")
+  print("Hello!")
 
 say()
 say()
