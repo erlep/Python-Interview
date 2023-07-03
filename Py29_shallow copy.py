@@ -16,3 +16,8 @@ print ('lb',lb)
 la.append(4)
 print ('la',la)
 print ('lb',lb)
+print()
+
+la = [7,8,9]
+print ('la',la)
+print ('lb',lb)

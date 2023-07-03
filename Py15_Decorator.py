@@ -1,26 +1,29 @@
-﻿# Decorators
-# Try THIS Simple Python Decorator (It's Super Useful) - https://youtu.be/4WQba4KwmRs
-# Decorators in Python - https://www.geeksforgeeks.org/decorators-in-python/
-import inspect
+#!/usr/bin/env python
 
-data_list = []
+from functools import wraps
 
-def register_fce(func):
-  data_list.append(func)
-  return func
+def memoize(func):
+  print('Adding memoize to', func.__name__)
+  cache = {}
+  @wraps(func) # to propagate docstring
+  def inner(*args):
+    if args in cache:
+      print ('to uz znam ',args ,' ' ,sep='',end='')
+      return cache[args]
+    result =  func(*args)
+    cache[args] = result
+    return result
+  return inner
 
-@register_fce
-def fce1():
-  return ' main: ' + __name__ + '  fce: ' + inspect.currentframe().f_code.co_name + '  str: fce1'
+@memoize
+def add(x, y):
+  ' secte 2 cisla '
+  print(f'Adding {x} + {y} = ',end='')
+  return x + y
 
-@register_fce
-def fce2():
-  return ' main: ' + __name__ + '  fce: ' + inspect.currentframe().f_code.co_name + '  str: fce2'
+print(add(3, 4))
+print(add(6, 9))
+print(add(3, 4))
+print(add(6, 9))
+print(add(6, 9))
 
-@register_fce
-def fce3():
-  return ' main: ' + __name__ + '  fce: ' + inspect.currentframe().f_code.co_name + '  str: fce3'
-
-if __name__ == "__main__":
-  for i in data_list:
-    print(i())

@@ -3,7 +3,7 @@
 
 # 8 - OOP - w3s https://www.w3schools.com/python/python_classes.asp
 class Person:
-  ''' class Person '''
+  ' class Person '
   def __init__(self, name='', age=''):
     ''' konstruktor '''
     self.name = name
@@ -17,7 +17,7 @@ person = Person("John", 36)
 person.print()
 
 class Student(Person):
-  ''' class Student(Person) '''
+  ' class Student(Person) '
   def __init__(self, name='', age='', school=''):
     # Person.__init__(self, name, age)
     super().__init__(name, age)
@@ -27,7 +27,7 @@ student = Student("Mike", 22, "VUT")
 student.print()
 
 class Absolvent(Student):
-  ''' class Absolvent(Student) '''
+  ' toto je class Absolvent potomek Student a Person '
   def __init__(self, name='', age='', school='', prace=''):
     # Person.__init__(self, name, age)
     super().__init__(name, age, school)
@@ -47,20 +47,6 @@ print('isinstance(Student(), Person)  : ', isinstance(Student(), Person))  # ret
 print('type(Student()) == Person      : ', type(Student()) == Person)  # returns False
 print()
 
-# Multiple Inheritance - https://bit.ly/3lQg5YX
-class Parent1:
-  x = 'x'
-class Parent2:
-  y = 'y'
-class Parent3:
-  z = 'z'
-class Kid(Parent1, Parent2, Parent3):
-  k = 'k'
-
-k = Kid()
-print('k.x:', k.x, '  k.y:', k.y, '  k.z:', k.z, '  k.k:', k.k)
-print()
-
 # dir() - vypis vlastnosti objektu
 # eval() - obsah promenne jako nazev
 # print(dir(absolvent))
@@ -68,5 +54,21 @@ print()
 for d in dir(absolvent):
   # eval
   t = eval('absolvent.' + d)
-  print('att:', d, '  val:', t)
+  # print('att:', d, '  val:', t)
+
+print('Properties:')
+print('absolvent.__dict__',absolvent.__dict__)
+print('absolvent.__class__',absolvent.__class__)
+print('absolvent.__dir__',absolvent.__dir__)
+print('absolvent.__doc__',absolvent.__doc__)
+print('absolvent.__subclasshook__',absolvent.__subclasshook__)
+print()
+
+print('Class Attribut:')
+Person.Tag = 'abc'
+print('Person.Tag: ',Person.Tag)
+print('Person.__dict__["Tag"]: ',Person.__dict__['Tag'])
+print('person.Tag: ',person.Tag)
+print('absolvent.Tag: ',absolvent.Tag)
+
 print("OkDone.")
