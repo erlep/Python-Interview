@@ -14,7 +14,7 @@ print('Fce(1, 2): ', Fce(1, 2))
 print()
 #############################################################
 # Default parametry, volitelne parametry
-def Fnc(a, b, c, d=4, e=5, f=6, *args, **kwargs):
+def Fnc(a, b, c:int, d:int=4, e=5, f=6, *args, **kwargs):
   print("a:", a, "  b:", b, "  c:", c, "  d:", d, "  e:", e, "  f:", f,)
   print("args:", args)
   print("kwargs:", kwargs)
@@ -51,3 +51,4 @@ print("MultiArgumentFce('2','test')", MultiArgumentFce('2', 'test'))
 print("MultiArgumentFce(3,'test','arguments')", MultiArgumentFce(3, 'test', 'arguments'))
 #############################################################
 #############################################################
+print('\nOkDone.')
