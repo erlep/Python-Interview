@@ -22,6 +22,7 @@ class Fruit:
       return False
 
   # Overloading __str__() to use print(Fruit):
+  # __str__ goal is to be readable
   def __str__(self):
     if self.name == "none":
       return "Weight: {0}\n".format(self.weight)
@@ -29,6 +30,7 @@ class Fruit:
       return "Name: {0}, Weight: {1}\n".format(self.name, self.weight)
 
   # Overloading __repr__() to use print(repr(Fruit)):
+  # __repr__ goal is to be unambiguous
   def __repr__(self):
     if self.name == "none":
       return "repr: Weight: {0}\n".format(self.weight)
