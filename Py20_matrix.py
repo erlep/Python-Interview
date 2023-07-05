@@ -186,6 +186,9 @@ class Matrix(object):
     print()
     return M
 
+# co bude videt pro package
+# __all__ = [ Matrix ]
+
 #  Calculates Matrix multiplication.
 if __name__ == '__main__':
   # # Matrixes A,  B - manual entry
