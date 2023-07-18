@@ -104,6 +104,17 @@ except:  # catch *all* exceptions # pylint: disable=bare-except
   print("Error: ", e)
 print()
 
+# try - except - https://wiki.python.org/moin/HandlingExceptions
+# -----------------------------------------------
+print("\n\t try - except  - General V2====================")
+# import sys
+(x, y) = (5, 0)
+try:
+  z = x/y
+except ValueError as e:  # catch *all* exceptions # pylint: disable=bare-except
+  print("The exception message is:", e)
+print()
+
 # filename and line number of Python script - https://bit.ly/307ZMjo
 # -----------------------------------------------
 print('filename and line number of Python script - Before Pos')
