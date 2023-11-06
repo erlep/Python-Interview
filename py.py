@@ -24,14 +24,12 @@ import sys
 print(sys.version)
 print('')
 
-
 print('Cmd line:')
 # argumenty
 for args in sys.argv:
   print(args, end=' ')
 
 print('\nKonec')
-
 
 # Output:
 # Python 3.6.4 :: Anaconda, Inc.
