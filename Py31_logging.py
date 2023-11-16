@@ -19,14 +19,14 @@ stdout_handler = logging.StreamHandler(stream=sys.stdout)
 handlers = [file_handler, stdout_handler]
 # logging iniicialization
 logging.basicConfig(
-  # filename='Py31_logging.log',
-  # stream=sys.stdout, to output only to stdout
-  encoding='utf-8',
-  level=logging.DEBUG,
-  # format=' %(name)s :: %(levelname)-8s :: %(message)s',
-  format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-  handlers = handlers,
-  )
+    # filename='Py31_logging.log',
+    # stream=sys.stdout, to output only to stdout
+    encoding='utf-8',
+    level=logging.DEBUG,
+    # format=' %(name)s :: %(levelname)-8s :: %(message)s',
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=handlers,
+)
 logging.debug('This message should not go to the log file')
 logging.info('But this should')
 
@@ -45,4 +45,4 @@ except ValueError as e:
 else:
   logger.info('Success')
 finally:
-  logger.info ('Done.\n')
+  logger.info('Done.\n')

@@ -20,16 +20,17 @@
 
 # Information about python interpreter
 import sys
+
 # To check your Python verson inside a script use:
 print(sys.version)
-print('')
+print("")
 
-print('Cmd line:')
+print("Cmd line:")
 # argumenty
 for args in sys.argv:
-  print(args, end=' ')
+  print(args, end=" ")
 
-print('\nKonec')
+print("\nKonec")
 
 # Output:
 # Python 3.6.4 :: Anaconda, Inc.

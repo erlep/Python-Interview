@@ -81,6 +81,8 @@ print('b in a ', x)
 # try - except
 # -----------------------------------------------
 print("\t try - except  ====================")
+
+
 def divide_numhere(num1, nun2):
   try:
     result = num1 / nun2
@@ -89,6 +91,8 @@ def divide_numhere(num1, nun2):
   except ZeroDivisionError:
     return "Can't divide by zero"
   return result
+
+
 output = divide_numhere(5, '10')
 print("try - except output: ", output)
 
