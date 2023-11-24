@@ -32,3 +32,37 @@ and the others
 9. Simpliv LLC <https://lnkd.in/dR_M9smM>
 10. Codecademy <https://lnkd.in/d7HvnxqK>
 11. LearnX <https://lnkd.in/djAvCF4Y>
+
+---
+
+## 24.11.2023 13:42
+
+Link co nefunguje blank [TankONO - TankONO](http://www.tank-ono.cz/cz/index.php?page=cenik){target="\_blank"}
+
+---
+
+---
+
+git remote show origin
+git describe
+
+---
+
+https://github.com/erlep/Portfolio https://erlep.github.io/Portfolio
+git remote set-url origin git@github.com:erlep/Python-Interview.git
+--
+https://github.com/erlep/Python-Interview
+git remote set-url origin git@github.com:erlep/Python-Interview.git
+--
+https://github.com/erlep/ppBB
+git remote set-url origin git@github.com:erlep/ppBB.git
+
+---
+
+Managing remote repositories - https://bit.ly/3Rh8nIA
+Switching remote URLs from HTTPS to SSH
+git remote -v
+origin https://github.com/ErleP/Python-Interview (fetch)
+origin https://github.com/ErleP/Python-Interview (push)
+git remote set-url origin git@github.com:OWNER/REPOSITORY.git
+git remote set-url origin git@github.com:erlep/Python-Interview.git
