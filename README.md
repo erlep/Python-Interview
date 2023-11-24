@@ -57,6 +57,10 @@ git remote set-url origin git@github.com:erlep/Python-Interview.git
 https://github.com/erlep/ppBB
 git remote set-url origin git@github.com:erlep/ppBB.git
 
+https://github.com/kenwoodjw/python_interview_question
+https://github.com/kenwoodjw/python_interview_question/blob/master/README_EN.md
+https://raw.githubusercontent.com/kenwoodjw/python_interview_question/master/README_EN.md
+
 ---
 
 Managing remote repositories - https://bit.ly/3Rh8nIA
@@ -66,3 +70,7 @@ origin https://github.com/ErleP/Python-Interview (fetch)
 origin https://github.com/ErleP/Python-Interview (push)
 git remote set-url origin git@github.com:OWNER/REPOSITORY.git
 git remote set-url origin git@github.com:erlep/Python-Interview.git
+
+---
+
+v 24.11.2023 17:15
