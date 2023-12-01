@@ -53,6 +53,10 @@ my_list = [1, 2, 3, "text", 7, 10]
 filtered = [x for x in my_list if isinstance(x, int)]
 print("\nmy_list:     ", my_list)
 print("jen typ int - filtered: ", filtered)
+# vse co neni str tak preved na str
+filtered = [str(x) if not (isinstance(x, str)) else x for x in my_list]
+print("not string to string - filtered: ", filtered)
+
 # unpacking of sequence in item and list
 a, *b = filtered
 print('a, *b = filtered:', filtered)

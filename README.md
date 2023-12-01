@@ -49,12 +49,15 @@ git describe
 ---
 
 https://github.com/erlep/Portfolio https://erlep.github.io/Portfolio
-git remote set-url origin git@github.com:erlep/Python-Interview.git
---
+
+## git remote set-url origin git@github.com:erlep/Python-Interview.git
+
 https://github.com/erlep/Python-Interview
-git remote set-url origin git@github.com:erlep/Python-Interview.git
---
+
+## git remote set-url origin git@github.com:erlep/Python-Interview.git
+
 https://github.com/erlep/ppBB
+
 git remote set-url origin git@github.com:erlep/ppBB.git
 
 https://github.com/kenwoodjw/python_interview_question
@@ -74,3 +77,7 @@ git remote set-url origin git@github.com:erlep/Python-Interview.git
 ---
 
 v 24.11.2023 17:15
+v 01.12.2023 15:55
+
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
