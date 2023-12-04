@@ -81,6 +81,7 @@ v 01.12.2023 15:55
 v 02.12.2023 11:33
 v 02.12.2023 14:52
 v 04.12.2023 19:34
+v 04.12.2023 08:44
 zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 
 Google, IBM and Harvard University are sponsoring Free courses for Python
