@@ -22,8 +22,10 @@
 import sys
 
 # To check your Python verson inside a script use:
-print(sys.version)
-print("")
+print('Python version:\n', sys.version)
+
+# Find full path of the Python interpreter? - https://bit.ly/3Tu9OVx
+print('Python interpreter full path:\n', sys.executable)
 
 print("Cmd line:")
 # argumenty
