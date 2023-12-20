@@ -27,12 +27,11 @@ for i in range(1, 12, 2):
 else:
   print("loop exited normally")
 
-
 # while
 # -----------------------------------------------
 print("\t while  ====================")
 i = 1
-while i <= 5:
+while i <= 7:
   print(i)
   i += 1
   # fix pylint - Else clause on loop without a break statement
@@ -41,14 +40,12 @@ while i <= 5:
 else:  # no break
   print("loop exited normally")
 
-
 # enumerate
 # -----------------------------------------------
 print("\t enumerate ====================")
 numbers = [45, 22, 14, 65, 97, 72]
 for i, num in enumerate(numbers, start=52):
   print(i, num)
-
 
 # if
 # -----------------------------------------------
@@ -81,8 +78,6 @@ print('b in a ', x)
 # try - except
 # -----------------------------------------------
 print("\t try - except  ====================")
-
-
 def divide_numhere(num1, nun2):
   try:
     result = num1 / nun2
@@ -91,15 +86,12 @@ def divide_numhere(num1, nun2):
   except ZeroDivisionError:
     return "Can't divide by zero"
   return result
-
-
 output = divide_numhere(5, '10')
 print("try - except output: ", output)
 
 # try - except - https://wiki.python.org/moin/HandlingExceptions
 # -----------------------------------------------
-print("\t try - except  - General ====================")
-# import sys
+print("\n\t try - except  - General ====================")
 (x, y) = (5, 0)
 try:
   z = x/y
@@ -111,26 +103,28 @@ print()
 # try - except - https://wiki.python.org/moin/HandlingExceptions
 # -----------------------------------------------
 print("\n\t try - except  - General V2====================")
-# import sys
 (x, y) = (5, 0)
 try:
   z = x/y
-except ValueError as e:  # catch *all* exceptions # pylint: disable=bare-except
-  print("The exception message is:", e)
+except ZeroDivisionError:
+  print("Delis nulou.")
+except Exception as ex:
+  print("The exception message is:", ex)
 print()
 
 # filename and line number of Python script - https://bit.ly/307ZMjo
 # -----------------------------------------------
 print('filename and line number of Python script - Before Pos')
-frameinfo = getframeinfo(currentframe())
+frameinfo = getframeinfo(currentframe())  # type: ignore
 print('File:', frameinfo.filename, '  Line:', frameinfo.lineno)
-print('After Pos')
+print('After Pos\n')
 
 # Determine if variable is defined - https://bit.ly/3wLgbr8
 # myVar = 1
 if "myVar" in (locals() or globals()):
   # `myVar` exists
-  print('myVar exists. Value:', myVar)
+  # print('myVar exists. Value:', myVar)
+  print('myVar exists.')
 else:
   print("myVar DOESN'T exists.")
 # To check if an object has an attribute:
