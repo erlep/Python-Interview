@@ -1,61 +1,44 @@
-﻿def typedproperty(name, typ):
-  private_name = '_' + name
+﻿# Python program to illustrate the use of
+# @property decorator
+# https://www.geeksforgeeks.org/python-property-decorator-property
+# How does the @property decorator work in Python? - https://bit.ly/3Rutoyi
 
-  def getter(self):
-    return getattr(self, private_name)
+# Creating class
+class Celsius:
+  # Defining init method with its parameter
+  def __init__(self, temp=0):
+    self._temperature = temp
 
-  def setter(self, value):
-    if not isinstance(value, typ):
-      raise TypeError(f'Expected {typ} got {value!r}')
-    setattr(self, private_name, value)
+  # @property decorator
+  @property
+  # Getter method
+  def temp(self):
+    # Prints the assigned temperature value
+    print("The value of the temperature is: ")
+    return self._temperature
 
-  return property(getter, setter)
+  # Setter method for object attribute 'temp'
+  @temp.setter
+  def temp(self, val):
+    # If temperature is less than -273 than a value
+    # error is thrown
+    if val < -273:
+      raise ValueError(f"It is a value error. Value:{val} is not allowed!")
+    # Prints this if the value of the temperature is set
+    print(f"The value {val} of the temperature is set.")
+    self._temperature = val
 
-class Stock:
-  __slots__ = ('_name', '_shares', '_price') # define allowed attributes
-  name = typedproperty('name', str)
-  shares = typedproperty('shares', int)
-  price = typedproperty('price', float)
+# Creating object for the stated class
+cel = Celsius()
 
-  def __init__(self, name, shares, price):
-    self.name = name
-    self.shares = shares
-    self.price = price
+# Setting the temperature value
+cel.temp = -270
 
-  def __repr__(self):
-    # Note: The !r format code produces the repr() string
-    # In Python format (f-string) strings, what does !r mean? - https://bit.ly/44q2oov
-    return f'{type(self).__name__}({self.name!r}, {self.shares!r}, {self.price!r})'
+# Prints the temperature that is set
+print(cel.temp)
 
-  def __eq__(self, other):
-    return isinstance(other, Stock) and ((self.name, self.shares, self.price) ==
-            (other.name, other.shares, other.price))
-
-  def __iter__(self):
-    for i in [ self.name , self.shares , self.price ]:
-      yield i
-
-
-s = Stock('GOOG',100,490.10)
-print(s.name) # 'GOOG'
-print(s.shares)
-print(s.price)
-print()
-
-# assigment test
-s.shares = 50     # OK
-# s.shares = '50'
-# s.shares = 12.3
-s.price = 123.45    # OK
-# s.price = '123.45'
-# s.price = 10
-# s.notExist = 42
-
-# iter
-for val in s:
-  print(val)
-
-print(list(s))
-print(tuple(s))
-my_name, my_shares, my_price = s
-print('name, shares, price ',my_name, my_shares, my_price )
+# Setting the temperature value to -300
+# which is not possible so, an error is
+# thrown
+cel.temp = -300
+print(cel.temp)
