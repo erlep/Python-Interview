@@ -21,22 +21,22 @@ def simple():
 
 def padding():
   for i in range(1, 4):
-    print(f'The number is {i:02}')
+    print(f'The number is {i:03}')
   st = 'abc'
-  print(f'{st :_>12}')
-  print(f'{st :_<12}')
-  print(f'{st :12}')
-  print(f'{st :^12}')
-  x12 = 'x' * 12
-  print(f'{x12 :^12}')
+  print(f'{st:_>12}')
+  print(f'{st:_<12}')
+  print(f'{st:12}')
+  print(f'{st:^12}')
+  x12 = 'x' * 12  # 12 x
+  print(f'{x12:^12}')  # zarovnani na stred na 12 znaku
   print()
 
 def equals_debugging():
   str_value = "other 🐶"
   num_value = 123
   print(f'the value is {str_value}')
-  print(f'{num_value = }')
-  print(f'{num_value % 2 = }')
+  print(f'{num_value=}')
+  print(f'{num_value % 2=}')
   print()
 
 def conversions():
@@ -81,8 +81,16 @@ def Example():
 
   # floats to two decimal points
   print('%.2f' % 3.141592)
-  print('%.2f' % 3.141592, ' a druhe cislo je %.3f ' %  1.2345678)
+  print('%.2f' % 3.141592, ' a druhe cislo je %.3f ' % 1.2345678)
   print()
+
+  # Python f-string tips & cheat sheets - https://www.pythonmorsels.com/string-formatting
+  # datetime podruhe https://cheatography.com/brianallan/cheat-sheets/python-f-strings-basics
+  # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
+  today = datetime.datetime.today()
+  print(f"Dnes je: {today}")
+  print(f"Dnes je: {today:%B %d, %Y}")
+  print(f"Nazev souboru: soubor_{today:%Y%m%d_%H%M%S}.txt")
 
 def main():
   simple()

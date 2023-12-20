@@ -48,9 +48,11 @@ print('%.3f' % (pi))
 print('{:f}'.format(pi))
 print('{:.3f}'.format(pi))
 
+# f-strings - https://bit.ly/4arWJSn
 print(f"Number pi:{pi:,}")
+print(f"Number pi:{pi:.3f}")
+
 formatted_float = "Number pi: {:.3f}".format(pi)
 print(formatted_float, type(formatted_float))
 
 print("OkDone.")
-
