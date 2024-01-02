@@ -108,7 +108,7 @@ try:
   z = x/y
 except ZeroDivisionError:
   print("Delis nulou.")
-except Exception as ex:
+except Exception as ex:  # pylint: disable=broad-except
   print("The exception message is:", ex)
 print()
 

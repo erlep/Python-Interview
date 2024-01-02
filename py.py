@@ -20,6 +20,7 @@
 
 # Information about python interpreter
 import sys
+import os
 
 # To check your Python verson inside a script use:
 print('Python version:\n', sys.version)
@@ -27,6 +28,10 @@ print('Python version:\n', sys.version)
 # Find full path of the Python interpreter? - https://bit.ly/3Tu9OVx
 print('Python interpreter full path:\n', sys.executable)
 
+# Get Current Directory  - https://bit.ly/3RQYLEE
+print('Current Directory:\n', os.getcwd())
+
+# Command line
 print("Cmd line:")
 # argumenty
 for args in sys.argv:

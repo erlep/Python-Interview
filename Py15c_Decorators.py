@@ -71,7 +71,7 @@ function_to_be_used()
 ###############################################################################
 # the execution time of a function using a decorator.
 ###############################################################################
-print('\n  decorator calculate_time')
+print('\n  Decorator calculate_time ###')
 # decorator to calculate duration # taken by any function.
 def calculate_time(func):
   # added arguments inside the inner1,
@@ -88,11 +88,11 @@ def calculate_time(func):
 
 # this can be added to any function present, in this case to calculate a factorial
 @calculate_time
-def factorial(num):
+def factorial(n):
   # sleep 2 seconds because it takes very less time
   # so that you can see the actual difference
   time.sleep(2)
-  print(math.factorial(num))
+  print(math.factorial(n))
 
 # calling the function.
 factorial(10)
@@ -100,7 +100,7 @@ factorial(10)
 ###############################################################################
 # What if a function returns something or an argument is passed to the function?
 ###############################################################################
-print('\n  decorator hello_decorator')
+print('\n  Decorator hello_decorator ###')
 def hello_decorator(func):
   def inner1(*args, **kwargs):
     print("before Execution")
@@ -117,23 +117,25 @@ def sum_two_numbers(a, b):
   print("Inside the function")
   return a + b
 
-a, b = 1, 2
+one, two = 1, 2
 # getting the value through return of the function
-print("Sum =", sum_two_numbers(a, b))
+print("Sum =", sum_two_numbers(one, two))
 
 
 ###############################################################################
 # Chaining Decorators
 ###############################################################################
-print('\n  Chaining Decorators')
+print('\n  Chaining Decorators ###')
 # code for testing decorator chaining
 def decor1(func):
   def inner():
+    print('inner1')
     x = func()
     return x * x
   return inner
 def decor2(func):
   def inner():
+    print('inner2')
     x = func()
     return 2 * x
   return inner
@@ -145,5 +147,3 @@ def num():
 
 print(num())
 print('OutPut: 400 \n')
-
-

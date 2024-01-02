@@ -1,58 +1,29 @@
-# Most Used Python Decorators - https://bit.ly/3XCKDjr
-# 10 Fabulous Python Decorators - https://bit.ly/3NE30jm
-# Decorators in Python - https://bit.ly/3rc8ieq
+#!/usr/bin/env python
 
-# @staticmethod: This decorator is used to define a static method in a class. It does not require an instance of the class to be called and can be accessed using the class name.
-# @classmethod: This decorator is used to define a class method in a class. It takes the class itself as the first argument instead of an instance of the class.
-# @property: This decorator is used to define a getter method for a class attribute. It allows you to access the attribute as if it were a regular attribute, but in reality it executes the getter method.
-# @abstractmethod: This decorator is used to define an abstract method in an abstract base class. It is used to enforce a specific behavior in the derived classes.
-# @wraps: This decorator is used to wrap a function or method and preserve its metadata such as its name, docstring and signature.
-# @lru_cache: This decorator is used to cache the result of a function call with a limited size cache. It can significantly improve the performance of functions that are called frequently with the same arguments.
+from functools import wraps
 
-# ==============================================================================
-# calculate function execution time
-import functools
-import time
+def memoize(func):
+  print('Adding memorize to', func.__name__)
+  cache = {}
 
-def timer(func):
-  # Decorators should copy metadata to the new function
-  @functools.wraps(func)
-  def wrapper(*args, **kwargs):
-    start_time = time.perf_counter()
-    value = func(*args, **kwargs)
-    end_time = time.perf_counter()
-    run_time = end_time - start_time
-    print("Finished {} in {} secs".format(repr(func.__name__), round(run_time, 3)))
-    return value
-  return wrapper
+  @wraps(func)  # to propagate docstring
+  def inner(*args):
+    if args in cache:
+      print('to uz znam ', args, ' ', sep='', end='')
+      return cache[args]
+    result = func(*args)
+    cache[args] = result
+    return result
+  return inner
 
-@timer
-def doubled_and_add(num):
-  res = sum([i*2 for i in range(num)])
-  print("Result : {}".format(res))
+@memoize
+def add(x, y):
+  ' secte 2 cisla '
+  print(f'Adding {x} + {y} = ', end='')
+  return x + y
 
-doubled_and_add(100000)
-doubled_and_add(1000000)
-doubled_and_add(10000000)
-print()
-
-# ==============================================================================
-# Stateful Decorators
-def count_calls(func):
-  @functools.wraps(func)
-  def wrapper(*args, **kwargs):
-    wrapper.num_calls += 1
-    print(f"Call {wrapper.num_calls} of {func.__name__!r}")
-    return func(*args, **kwargs)
-  wrapper.num_calls = 0
-  return wrapper
-
-@count_calls
-def say():
-  print("Hello!")
-
-say()
-say()
-say()
-say()
-print('Pocet volani say()',say.num_calls)
+print(add(3, 4))
+print(add(6, 9))
+print(add(3, 4))
+print(add(6, 9))
+print(add(6, 9))
