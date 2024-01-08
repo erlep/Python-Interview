@@ -23,7 +23,7 @@ import sys
 import os
 
 # To check your Python verson inside a script use:
-print('Python version:\n', sys.version)
+print('\nPython version:\n', sys.version)
 
 # Find full path of the Python interpreter? - https://bit.ly/3Tu9OVx
 print('Python interpreter full path:\n', sys.executable)
@@ -37,7 +37,7 @@ print("Cmd line:")
 for args in sys.argv:
   print(args, end=" ")
 
-print("\nKonec")
+print("\nOkDone.")
 
 # Output:
 # Python 3.6.4 :: Anaconda, Inc.
