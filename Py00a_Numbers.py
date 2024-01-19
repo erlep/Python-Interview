@@ -44,7 +44,7 @@ pi = 3.141592653589793
 # old
 print('%f' % (pi))
 print('%.3f' % (pi))
-# new
+# new - format string muze byt v promenne
 print('{:f}'.format(pi))
 print('{:.3f}'.format(pi))
 
