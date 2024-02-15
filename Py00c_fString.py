@@ -5,13 +5,27 @@
 # datetime podruhe https://cheatography.com/brianallan/cheat-sheets/python-f-strings-basics
 # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
 
-print('\t== integer ==')
-n: int = 1_000_000_000
-print(f'{n}')
-print(f'{n:_}')
-print(f'{n:,}')
+from datetime import datetime
 
-print('\t== string ==')
+print('\t=== integer ===')
+i: int = 1_000_000_000
+print(f'{i}')
+print(f'{i:_}')
+print(f'{i:,}')
+
+print('\t=== float ===')  # f-strings float - https://bit.ly/4arWJSn
+f: float = 1234.5678
+print(round(f, 3))
+print(f'Result: {f:.0f}')
+print(f'Result: {f:.3f}')
+print(f'Result: {f:_.3f}')
+
+print('\t=== f-string in variable ===')  # format muze byt v promenne
+formatted_float: str = "Number pi: {:.2f}".format(f)
+print(formatted_float)
+print(f'{formatted_float=} {type(formatted_float)=}')
+
+print('\t=== string ===')
 var: str = 'abc'
 print(f'{var:20}: ')
 print(f'{var: >20}: ')
@@ -19,21 +33,7 @@ print(f'{var:_>20}: ')
 print(f'{var:#<20}: ')
 print(f'{var:|^20}: ')
 
-print('\t== datetime ==')
-from datetime import datetime
-now: datetime = datetime.now()
-print(f'{now:%d.%m.%Y %H:%M:%S}')
-print(f'{now:%c}')
-print(f'{now:%I%p}')
-
-print('\t== float ==')
-n: float = 1234.5678
-print(round(n, 2))
-print(f'Result: {n:.2f}')
-print(f'Result: {n:.0f}')
-print(f'Result: {n:_.3f}')
-
-print('\t== calculation ==')
+print('\t=== evaluation ===')
 a: int = 5
 b: int = 10
 my_var: str = 'Bob says hi'
@@ -42,18 +42,12 @@ print(f'{bool(a)=}')
 print(f'{my_var=}')
 print(f'{my_var=} {type(my_var)=}')
 
-print('\t== my float ==')
-# f-strings - https://bit.ly/4arWJSn
-pi: float = 3.141592653589793
-print(f"Number pi:{pi:,}")
-print(f"Number pi:{pi:.3f}")
-# format muze byt v promenne
-formatted_float: str = "Number pi: {:.3f}".format(pi)
-print(formatted_float, type(formatted_float))
-
-print('\t== my datetime ==')
-today: datetime = datetime.today()
-print(f"Dnes je: {today}")
-print(f"Dnes je: {today:%B %d, %Y}")
-print(f"Nazev souboru: soubor_{today:%Y%m%d_%H%M%S}.txt")
+print('\t=== datetime ===')
+now: datetime = datetime.now()
+print(f'Now: {now}')
+print(f'Now: {now:%d.%m.%Y %H:%M:%S}')
+print(f'Now: {now:%c}')
+print(f'Now: {now:%I%p} - imperial')
+print(f"Now: {now:%B %d, %Y}")
+print(f"Nazev souboru: soubor_{now:%Y%m%d_%H%M%S}.txt")
 print()
