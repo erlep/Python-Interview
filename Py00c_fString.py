@@ -40,6 +40,7 @@ my_var: str = 'Bob says hi'
 print(f'{a + b=}')
 print(f'{bool(a)=}')
 print(f'{my_var=}')
+print(f'{my_var=} {type(my_var)=}')
 
 print('\t== my float ==')
 # f-strings - https://bit.ly/4arWJSn
