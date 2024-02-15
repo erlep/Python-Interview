@@ -35,14 +35,14 @@ def equals_debugging():
   str_value = "other 🐶"
   num_value = 123
   print(f'the value is {str_value}')
-  print(f'{num_value=}')
-  print(f'{num_value % 2=}')
+  print(f'Hodnota: {num_value=}')
+  print(f'Operace: {num_value % 2=}')
   print()
 
 def conversions():
   str_value = "other 🐶"
-  print(f'{str_value!s}')
-  print(f'{str_value!r}')
+  print(f'prevod na str: {str_value!s}')
+  print(f"prevod na 'str': {str_value!r}")
   print()
 
 class MyClass:
@@ -50,12 +50,11 @@ class MyClass:
     print(f'MyClass __format__ called with {format_spec=!r}')
     return "MyClass()"
 
-
 def formatting():
   num_value = 123.456
+  print(f'{num_value:.2f}')
   now = datetime.datetime.now()
   print(f'{now=:%Y-%m-%d %H:%M:%S}')
-  print(f'{num_value:.2f}')
   print(f'{MyClass():blah blah %%MYFORMAT%%}')
 
   nested_format = ".2f"
