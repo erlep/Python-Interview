@@ -59,17 +59,35 @@ class Book:
       case _:
         raise ValueError(f'Unknown specifier for Book()')
 
+# def main() -> None:
+#   hairy_potter: Book = Book('Very Hairy Potter', 300)
+#   python_daily: Book = Book('Python Daily', 20)
+#   print(f' {hairy_potter:caps}')
+#   print(f'Read time: {hairy_potter:time}')
+
+#   print(f' {python_daily:caps}')
+#   print(f'Read time: {python_daily:time}')
+#   print()
+
+# def main() -> None:
+#   users: dict[int, str] = {0: 'Bob', 1: 'Mario'}
+#   # user: str | None = users.get(1)
+#   # if user:
+#   # walrus operator
+#   if user := users.get(1):
+#     print(f'{user} exists!')
+#   else:
+#     print('No user found...')
+
+def get_info(text_str: str) -> dict:
+  return {'words': (words := text_str.split()),
+          'word_count': len(words),
+          'character_count': len(''.join(words))}
+
 def main() -> None:
-  hairy_potter: Book = Book('Very Hairy Potter', 300)
-  python_daily: Book = Book('Python Daily', 20)
-  print(f' {hairy_potter:caps}')
-  print(f'Read time: {hairy_potter:time}')
-
-  print(f' {python_daily:caps}')
-  print(f'Read time: {python_daily:time}')
-
-pokracovat  CAS 8:00
-# 5 Uncommon Python Features I Love https://youtu.be/sQ1Q96-Vhjk?si=olMWn2-BDlf0n7Jc
+  print(get_info('Bob'))
+  print(get_info('Hello, Bob'))
+  print(get_info('My name is Bob!'))
 
 if __name__ == "__main__":
   main()
