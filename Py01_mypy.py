@@ -2,6 +2,8 @@
 
 # Type hints cheat sheet - https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html
 # Python Type Hints Cheat Sheet - https://uhtred.dev/insights/python-type-hints-cheat-sheet
+# Python Type Hints Cheatsheet - https://www.kuniga.me/docs/python/types.html
+# Typing - https://www.pythonsheets.com/notes/python-typing.html
 
 # This is how we declare the type of a variable.
 # It is not necessary to initialize a variable to declare its type
@@ -49,3 +51,8 @@ if v_opt is not None:
 # the type checker
 assert v_opt is not None
 print(v_opt.title())
+
+pseudo_int: int = 'a'  # type: ignore
+
+def inc(value: int, amount: int = 1) -> int:
+  return value + amount
