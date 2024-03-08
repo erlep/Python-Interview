@@ -23,7 +23,7 @@ numbers: list[int] = list(range(1, 11))
 text: str = 'Hello, world!'
 print(numbers[::-1])
 print(text[::-1])
-# ::-1
+# ::-1 - slice in variable
 rev: slice = slice(None, None, -1)
 print(numbers[rev])
 print(text[rev])
@@ -32,6 +32,8 @@ print()
 # Sets
 set_a: set[int] = {1, 2, 3, 4, 5}
 set_b: set[int] = {4, 5, 6, 7, 8}
+print(f'{set_a=}')
+print(f'{set_b=}')
 # Combine: | → union (vertical bar char)
 print('| ', set_a | set_b)
 # & → intersection
@@ -46,18 +48,20 @@ print('<=', set_a <= set_b)
 print()
 
 # f-String for class
+from typing import Any
+
 class Book:
   def __init__(self, title: str, pages: int) -> None:
     self.title = title
     self.pages = pages
-  def __format__(self, format_spec: any) -> str:
+  def __format__(self, format_spec: Any) -> str:
     match format_spec:
       case 'time':
         return f'{self.pages / 60:.2f}h'
       case 'caps':
         return self. title.upper()
       case _:
-        raise ValueError(f'Unknown specifier for Book()')
+        raise ValueError('Unknown specifier for Book()')
 
 def main() -> None:
   hairy_potter: Book = Book('Very Hairy Potter', 300)
