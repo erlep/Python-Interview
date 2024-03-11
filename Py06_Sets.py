@@ -17,5 +17,3 @@ print(f'^ {set_a ^ set_b=}')
 # < <= > >= → inclusion relations
 print(f'<={set_a <= set_b=}')
 print()
-
-# test v2
