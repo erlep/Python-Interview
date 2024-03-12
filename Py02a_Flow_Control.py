@@ -70,9 +70,9 @@ print(x)
 # if - value in a list
 # -----------------------------------------------
 print("\t if - value in a list  ====================")
-a = [4, 2, 3, 1, 5, 6]
+L = [4, 2, 3, 1, 5, 6]
 b = 5
-x = b in a
+x = b in L
 print('b in a ', x)
 
 # try - except
@@ -98,7 +98,6 @@ try:
 except:  # catch *all* exceptions # pylint: disable=bare-except
   e = sys.exc_info()[0]
   print("Error: ", e)
-print()
 
 # try - except - https://wiki.python.org/moin/HandlingExceptions
 # -----------------------------------------------
@@ -110,11 +109,27 @@ except ZeroDivisionError:
   print("Delis nulou.")
 except Exception as ex:  # pylint: disable=broad-except
   print("The exception message is:", ex)
-print()
+
+# match - case - New In Python 3.10 - https://bit.ly/48Sql9M
+# -----------------------------------------------
+print("\n\t match - case - Python => 3.10 ================")
+def check_grade(grade: str) -> None:
+  match grade:
+    case "A":
+      print("Excellent!")
+    case "B":
+      print("Good!")
+    case "C":
+      print("Average!")
+    case _:
+      print("Invalid grade!")
+check_grade("A")  # Output: Excellent!
+check_grade("B")  # Output: Good!
+check_grade("D")  # Output: Invalid grade!
 
 # filename and line number of Python script - https://bit.ly/307ZMjo
 # -----------------------------------------------
-print('filename and line number of Python script - Before Pos')
+print('\nfilename and line number of Python script - Before Pos')
 frameinfo = getframeinfo(currentframe())  # type: ignore
 print('File:', frameinfo.filename, '  Line:', frameinfo.lineno)
 print('After Pos\n')
