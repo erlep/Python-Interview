@@ -1,3 +1,4 @@
+# * - Asterisk = Unpack Operator
 # Asterisks in Python: what they are and how to use them - https://bit.ly/3GbgL4Z
 print('2*5', 2*5)
 print('2**5', 2**5)

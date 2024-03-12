@@ -149,9 +149,9 @@ else:
 # assert - https://www.w3schools.com/python/ref_keyword_assert.asp
 # -----------------------------------------------
 print("\n\t assert =======================================")
-x = "hello"
+t = "hello"
 # if condition returns False, AssertionError is raised:
-# assert x == "goodbye", "x should be 'hello'"
-assert x == "hello", "x should be 'hello'"
+# assert t == "goodbye", "t should be 'hello'"
+assert t == "hello", "t should be 'hello'"
 
 print("OkDone.")
