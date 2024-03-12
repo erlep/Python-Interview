@@ -1,32 +1,23 @@
-﻿# Class Attributes
-class Date:
-  datefmt = '{year}-{month}-{day}'  # there is no 'self.'  ! - Class Attributes
-  def __init__(self, year, month, day):
-    self.year = year
-    self.month = month
-    self.day = day
-  def __str__(self):
-    return self.datefmt.format(year=self.year,
-                               month=self.month,
-                               day=self.day)
-class USDate(Date):
-  datefmt = '{month}/{day}/{year}'
+﻿#!/usr/bin/env python
 
-d_mil = Date('2023', '06', '28')
-print("d_mil", d_mil)
-d_usa = USDate('2023', '06', '28')
-print("d_usa", d_usa)
-print()
+# Calling super() inside a class' classmethod to get at the metaclass method - https://bit.ly/43cZCn6
 
-# Class Methods - @classmethod & cls - pracuje primo se tridou NE s instanci tridy
-# ● Class methods can be called from the class
-# ● They take the class (cls) instead of self as the first
-class DataConnection:
-  active = True
+class A:
   @classmethod
-  def toggle(cls):
-    cls.active = not cls.active
-print("DataConnection.active:", DataConnection.active)
-DataConnection.toggle()
-print("DataConnection.toggle()")
-print("DataConnection.active:", DataConnection.active)
+  def f(cls):
+    return 1
+class B(A):
+  pass
+class C(A):
+  @classmethod
+  def f(cls):
+    return 2
+class D(B, C):
+  @classmethod
+  def f(cls):
+    return super().f() + 1
+
+print(f'{A.f()=}')
+print(f'{B.f()=}')
+print(f'{C.f()=}')
+print(f'{D.f()=}')

@@ -146,4 +146,12 @@ else:
 # if hasattr(obj, 'attr_name'):
 #   # obj.attr_name exists.
 
+# assert - https://www.w3schools.com/python/ref_keyword_assert.asp
+# -----------------------------------------------
+print("\n\t assert =======================================")
+x = "hello"
+# if condition returns False, AssertionError is raised:
+# assert x == "goodbye", "x should be 'hello'"
+assert x == "hello", "x should be 'hello'"
+
 print("OkDone.")

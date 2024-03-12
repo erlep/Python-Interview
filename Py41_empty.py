@@ -1,21 +1,42 @@
 ﻿#!/usr/bin/env python
 
-# Python Inheritance Explained: Complete Guide - https://ioflood.com/blog/python-inheritance/
+# How to instantiate a class given its parent class in Python? - https://bit.ly/3v7qqbF
 
-class Father:
-  def skills(self):
-    print('Programming and Cooking')
+class MetaAnimal(type):
+  classes: dict = {}
+  print(f'{classes=} ')
 
-class Mother:
-  def skills(self):
-    print('Art and Teaching')
+  def __new__(mcs, name, bases, dct):
+    result = super().__new__(mcs, name, bases, dct)
+    mcs.classes[name.lower()] = result
+    # print(f'⚡{MetaAnimal.classes=} \n{type(MetaAnimal.classes)=}')
+    return result
 
-class Child(Father, Mother):
-  pass
+  @classmethod
+  def get_animal(mcs, name):
+    return mcs.classes.get(name)
 
-# Creating an instance of the Child class
-child = Child()
-child.skills()
 
-# Output:
-# 'Programming and Cooking'
+class Animal(metaclass=MetaAnimal):
+  def communicate(self):
+    pass
+
+
+class Dog(Animal):
+  def communicate(self):
+    self.bark()
+
+  def bark(self):
+    print('Woof')
+
+
+class Cat(Animal):
+  def communicate(self):
+    self.meow()
+
+  def meow(self):
+    print('Meow')
+
+
+MetaAnimal.get_animal('cat')().communicate()
+MetaAnimal.get_animal('dog')().communicate()

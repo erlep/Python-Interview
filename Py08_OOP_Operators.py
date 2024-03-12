@@ -1,9 +1,19 @@
 ﻿# -*- coding: utf-8 -*-
 # How to overload an operator in Python - https://tny.im/KYrsH
 # How do I type hint a method with the type of the enclosing class? - https://bit.ly/48NXdQR
+# __new__ vs. __init__ Methods in Python - https://bit.ly/3IAsBYm
+# __new__ is a static method, while __init__ is an instance method.
+# __new__ can return any object, while __init__ must return None.
 
-class Fruit(object):
+class Fruit:
+  def __new__(cls, weight: int, name: str = "none") -> 'Fruit':
+    '__new__ is responsible for creating and returning a new instance'
+    print(f'New : {name=} {weight=}')
+    instance = super().__new__(cls)
+    return instance
   def __init__(self, weight: int, name: str = "none") -> None:
+    '__init__ is responsible for initializing the attributes of the newly created object'
+    # print(f'Init: {name=} {weight=}')
     self.name = name
     self.weight = weight
   def __add__(self, x: 'Fruit | int') -> 'Fruit':
@@ -39,8 +49,8 @@ class Fruit(object):
     'repr() method'
     if self.name == "none":
       return "repr: Weight: {0}".format(self.weight)
-    else:
-      return "repr: Name: {0}, Weight: {1}".format(self.name, self.weight)
+    # else:
+    return "repr: Name: {0}, Weight: {1}".format(self.name, self.weight)
 
   # Overloading __format__() to use print(f'{a:name}')
   # __format__ goal is to accepts a format_spec that can be used to style the returned string - https://bit.ly/3TgnIZH
