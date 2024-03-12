@@ -54,7 +54,7 @@ class Matrix(object):
       self.name = name
       self.mx_rows = mx
     # Check
-    if not(self.check()):
+    if not (self.check()):
       s = '!!! Wrong Matrix! !!!'
       self.name = s
       print(s)
@@ -105,7 +105,7 @@ class Matrix(object):
     # Kontrola na stejny pocet radku a sloupcu
     for i in self.rows():
       # vsechny prvky matice stejny typ: int OR float
-      if not(all((type(t) == int) or (type(t) == float) for t in i)):
+      if not (all((type(t) == int) or (type(t) == float) for t in i)):
         return False
       # kontrola: width
       if len(i) != self.width:

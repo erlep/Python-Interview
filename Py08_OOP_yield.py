@@ -4,7 +4,7 @@
 #######################################
 # yield for class
 class FRange:
-  def __init__(self, start,stop,step):
+  def __init__(self, start, stop, step):
     self.start = start
     self.stop = stop
     self.step = step

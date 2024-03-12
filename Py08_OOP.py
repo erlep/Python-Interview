@@ -64,11 +64,12 @@ print('absolvent.__doc__', absolvent.__doc__)
 print('absolvent.__subclasshook__', absolvent.__subclasshook__)
 print()
 
-print('Class Attribut:')
-Person.Tag = 'abc'
-print('Person.Tag: ', Person.Tag)
-print('Person.__dict__["Tag"]: ', Person.__dict__['Tag'])
-print('person.Tag: ', person.Tag)
-print('absolvent.Tag: ', absolvent.Tag)
+# # nestandardni pouzivani
+# print('Class Attribut:')
+# Person.Tag = 'abc'
+# print('Person.Tag: ', Person.Tag)
+# print('Person.__dict__["Tag"]: ', Person.__dict__['Tag'])
+# print('person.Tag: ', person.Tag)
+# print('absolvent.Tag: ', absolvent.Tag)
 
 print("OkDone.")
