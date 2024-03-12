@@ -7,17 +7,19 @@ class Bike:
 class Loud:
   def noise(self):
     return super().noise().upper()
-class LoudDog(Loud, Dog,): pass
-class LoudBike(Loud, Bike): pass
+class LoudDog(Loud, Dog,):
+  pass
+class LoudBike(Loud, Bike):
+  pass
 
 print('  Noises:')
 d = Dog()
-print (d.noise())
+print(d.noise())
 b = Bike()
-print (b.noise())
+print(b.noise())
 
 print('  Load noises:')
 ld = LoudDog()
-print (ld.noise())
+print(ld.noise())
 lb = LoudBike()
-print (lb.noise())
+print(lb.noise())

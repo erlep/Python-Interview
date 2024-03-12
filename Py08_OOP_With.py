@@ -11,8 +11,8 @@ class Context():
     print("Context: enter")
     return "foo"
 
-  def __exit__(self, type, value, traceback):
-    print("Context: exit", type, value, traceback)
+  def __exit__(self, exit_type, value, traceback):
+    print("Context: exit", exit_type, value, traceback)
 
 
 print("Before with block")

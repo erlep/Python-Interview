@@ -14,7 +14,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 def simple():
   # f-Strings - https://bit.ly/3H1a7yl
   name = "Pepa " + \
-      "Zdepa"
+      "Zdepa"  # + \ - pokracovani prikazu na dalsim radku
   age = 99
   print(f"Hello, {name}. You are {age}.")
   print()

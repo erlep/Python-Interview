@@ -57,18 +57,18 @@ for d in dir(absolvent):
   # print('att:', d, '  val:', t)
 
 print('Properties:')
-print('absolvent.__dict__',absolvent.__dict__)
-print('absolvent.__class__',absolvent.__class__)
-print('absolvent.__dir__',absolvent.__dir__)
-print('absolvent.__doc__',absolvent.__doc__)
-print('absolvent.__subclasshook__',absolvent.__subclasshook__)
+print('absolvent.__dict__', absolvent.__dict__)
+print('absolvent.__class__', absolvent.__class__)
+print('absolvent.__dir__', absolvent.__dir__)
+print('absolvent.__doc__', absolvent.__doc__)
+print('absolvent.__subclasshook__', absolvent.__subclasshook__)
 print()
 
 print('Class Attribut:')
 Person.Tag = 'abc'
-print('Person.Tag: ',Person.Tag)
-print('Person.__dict__["Tag"]: ',Person.__dict__['Tag'])
-print('person.Tag: ',person.Tag)
-print('absolvent.Tag: ',absolvent.Tag)
+print('Person.Tag: ', Person.Tag)
+print('Person.__dict__["Tag"]: ', Person.__dict__['Tag'])
+print('person.Tag: ', person.Tag)
+print('absolvent.Tag: ', absolvent.Tag)
 
 print("OkDone.")

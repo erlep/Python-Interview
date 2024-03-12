@@ -48,13 +48,12 @@ print('<=', set_a <= set_b)
 print()
 
 # f-String for class
-from typing import Any
-
 class Book:
   def __init__(self, title: str, pages: int) -> None:
     self.title = title
     self.pages = pages
-  def __format__(self, format_spec: Any) -> str:
+  def __format__(self, format_spec: str) -> str:
+    # print(f'zzzz\n {format_spec=} \n {type(format_spec)=}')
     match format_spec:
       case 'time':
         return f'{self.pages / 60:.2f}h'
@@ -93,5 +92,5 @@ def main() -> None:
 #   print(get_info('Hello, Bob'))
 #   print(get_info('My name is Bob!'))
 
-# if __name__ == "__main__":
-#   main()
+if __name__ == "__main__":
+  main()

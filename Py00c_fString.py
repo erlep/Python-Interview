@@ -7,25 +7,27 @@
 
 from datetime import datetime
 
-print('\t=== integer ===')
+print('\t⚡=== integer ===⚡')
 i: int = 1_000_000_000
 print(f'{i}')
 print(f'{i:_}')
 print(f'{i:,}')
 
-print('\t=== float ===')  # f-strings float - https://bit.ly/4arWJSn
+print('\t⚡=== float ===⚡')  # f-strings float - https://bit.ly/4arWJSn
 f: float = 1234.5678
 print(round(f, 3))
 print(f'Result: {f:.0f}')
 print(f'Result: {f:.3f}')
 print(f'Result: {f:_.3f}')
 
-print('\t=== f-string in variable ===')  # format muze byt v promenne
-formatted_float: str = "Number pi: {:.2f}".format(f)
+print('\t⚡=== f-string in variable ===')  # format muze byt v promen✔️ne
+nested_format: str = '.2f'
+print(f'nested_format Real number: {f:{nested_format}}')
+formatted_float: str = "Real number: {:.2f}".format(f)
 print(formatted_float)
 print(f'{formatted_float=} {type(formatted_float)=}')
 
-print('\t=== string ===')
+print('\t⚡=== string ===⚡')
 var: str = 'abc'
 print(f'{var:20}: ')
 print(f'{var: >20}: ')
@@ -33,7 +35,7 @@ print(f'{var:_>20}: ')
 print(f'{var:#<20}: ')
 print(f'{var:|^20}: ')
 
-print('\t=== evaluation ===')
+print('\t⚡=== evaluation ===⚡')
 a: int = 5
 b: int = 10
 my_var: str = 'Bob says hi'
@@ -42,7 +44,7 @@ print(f'{bool(a)=}')
 print(f'{my_var=}')
 print(f'{my_var=} {type(my_var)=}')
 
-print('\t=== datetime ===')
+print('\t⚡=== datetime ===⚡')
 now: datetime = datetime.now()
 print(f'Now: {now}')
 print(f'Now: {now:%d.%m.%Y %H:%M:%S}')
