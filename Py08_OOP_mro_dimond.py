@@ -9,25 +9,31 @@ class A:
     super(A, self).__init__()
     print("<- A")
 
-class B:
+class B(A):
   def __init__(self):
     print("-> B")
     super(B, self).__init__()
     print("<- B")
 
-class C(A, B):
+class C(A):
   def __init__(self):
     print("-> C")
-    # Use super here, instead of explicit calls to __init__
     super(C, self).__init__()
     print("<- C")
+
+class D(B, C):
+  def __init__(self):
+    print("-> D")
+    # Use super here, instead of explicit calls to __init__
+    super(D, self).__init__()
+    print("<- D")
   def bases(self):
-    print("\nbases from C")
-    for cls in C.__bases__:
+    print("\nbases from D")
+    for cls in D.__bases__:
       print(f'{cls=}  {type(cls)=}')
 
-# print(f'{C()=}')
-c = C()
-c.bases()
-print(f'\n{C.mro()=}')
-print(f'\n{C.__mro__=}')
+# print(f'{D()=}')
+d = D()
+d.bases()
+print(f'\n{D.mro()=}')
+print(f'\n{D.__mro__=}')
