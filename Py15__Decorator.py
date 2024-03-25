@@ -11,39 +11,41 @@
 
 # ==============================================================================
 # calculate function execution time
-import functools
+# import functools # - Python 3.12 neni potreba
 import time
 
 def timer(func):
   'Time Measure Decorator'
   # Decorators should copy metadata to the new function
-  @functools.wraps(func)
+  # @functools.wraps(func) # - Python 3.12 neni potreba
   def wrapper(*args, **kwargs):
     start_time = time.perf_counter()
     value = func(*args, **kwargs)
     end_time = time.perf_counter()
     run_time = end_time - start_time
-    print("Finished {} in {} secs".format(repr(func.__name__), round(run_time, 3)))
+    print(f"Finished {repr(func.__name__)} in {run_time:.3f} secs")
     return value
   return wrapper
 
 @timer
 def doubled_and_add(num):
   res = sum([i*2 for i in range(num)])
-  print("Result : {}".format(res))
+  print(f"Result : {res}")
 
-doubled_and_add(100000)
-doubled_and_add(1000000)
-doubled_and_add(10000000)
+print('Time Measure Decorator')
+# doubled_and_add(100_000)
+# doubled_and_add(1_000_000)
+# doubled_and_add(10_000_000)
 print()
 
 # ==============================================================================
 # pocitani volani funkce - Stateful Decorators
 def count_calls(func):
   'Count Calls Decorator. Number of calls in <fce>.num_calls '
-  @functools.wraps(func)
+  # @functools.wraps(func) # - Python 3.12 neni potreba
   def wrapper(*args, **kwargs):
     wrapper.num_calls += 1  # type: ignore
+    wrapper.jmeno = func.__name__
     print(f"Call {wrapper.num_calls} of {func.__name__!r}")  # type: ignore
     return func(*args, **kwargs)
   wrapper.num_calls = 0  # type: ignore
@@ -53,8 +55,10 @@ def count_calls(func):
 def say():
   print("Hello!")
 
-say()
-say()
-say()
-say()
-print('Pocet volani say()', say.num_calls)
+print('Function Calls Counter')
+fce = say
+fce()
+fce()
+fce()
+fce()
+print(f'Pocet volani: {fce.jmeno!r}: {fce.num_calls} pocitano pomoci {fce.__name__!r}')
