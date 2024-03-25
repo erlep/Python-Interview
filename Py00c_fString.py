@@ -20,20 +20,28 @@ print(f'Result: {f:.0f}')
 print(f'Result: {f:.3f}')
 print(f'Result: {f:_.3f}')
 
-print('\t⚡=== f-string in variable ===')  # format muze byt v promen✔️ne
+print('\t⚡=== f-string in variable ===')  # format muze byt v promene
 nested_format: str = '.2f'
+print(f'{nested_format=}')
 print(f'nested_format Real number: {f:{nested_format}}')
 formatted_float: str = "Real number: {:.2f}".format(f)
 print(formatted_float)
 print(f'{formatted_float=} {type(formatted_float)=}')
 
+print('\t⚡=== scientific ===⚡')
+big_number: int = 1_620_000_000
+print(f'{big_number=:_.3f}')
+print(f'{big_number=:.2e}')
+
 print('\t⚡=== string ===⚡')
-var: str = 'abc'
-print(f'{var:20}: ')
-print(f'{var: >20}: ')
-print(f'{var:_>20}: ')
-print(f'{var:#<20}: ')
-print(f'{var:|^20}: ')
+var: str = '⚡abc'
+print(f'{var=} {var=!r} {var=!s} {var[0]=!a}')  # r - raw, s - string, a - ASCII
+print(f'{var:20}:')
+print(f'{var: >20}:')
+print(f'{var:_>20}:')
+print(f'{var:#<20}:')
+print(f'{var:|^20}:')
+print(fr'\{var:|^18}\:')  # f-string and raw string together
 
 print('\t⚡=== evaluation ===⚡')
 a: int = 5
