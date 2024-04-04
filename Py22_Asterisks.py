@@ -22,14 +22,10 @@ print('filename = "{year}-{month}-{day}.txt".format(**date_info)', filename)
 print()
 
 # This function accepts any number of arguments:
-def MultiArgumentFce(*argumenty):
-  print('  argumenty', argumenty, '  len(argumenty)', len(argumenty), '  type(argumenty)', type(argumenty))
-  # for idx, val in enumerate(argumenty):
-  #   print('idx', idx, 'val', val)
-print("MultiArgumentFce()", MultiArgumentFce())
-print("MultiArgumentFce(1)", MultiArgumentFce(1))
-print("MultiArgumentFce('2','test')", MultiArgumentFce('2', 'test'))
-print("MultiArgumentFce(3,'test','arguments')", MultiArgumentFce(3, 'test', 'arguments'))
+def join_text(*strings, sep: str) -> str:
+  return sep.join(strings)
+print(join_text('A', 'B', 'C', 'D', sep='-'))
+print(join_text('X', 'Y', 'Z', sep='='))
 print()
 
 # * for unpacking
@@ -50,3 +46,12 @@ date_info = {'year': '2020', 'month': '01', 'day': '7'}
 event_info = {**date_info, 'group': "Python Meetup"}
 print(event_info)  # {'year': '2020', 'month': '01', 'day': '7', 'group': 'Python Meetup'}
 print()
+
+# asterisks as forsing to use keywords arguments - https://youtu.be/7fSHTqM8gHs?si=8yRpaQShuGPlIz0G
+def MyFce(file: str, *, quality: str, privacy: str) -> None:
+  # pass
+  # ...
+  # raise NotImplementedError()
+  print(f'{file=} {quality=}  {privacy=}')
+MyFce('qq.tx', quality='qlt', privacy='privacy')
+# MyFce('qq.tx', 'qlt', 'privacy')
