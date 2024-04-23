@@ -19,6 +19,7 @@ print(round(f, 3))
 print(f'Result: {f:.0f}')
 print(f'Result: {f:.3f}')
 print(f'Result: {f:_.3f}')
+print(f'Result: {f=:12_.3f}')
 
 print('\t⚡=== f-string in variable ===')  # format muze byt v promene
 nested_format: str = '.2f'
