@@ -35,6 +35,12 @@ and the others
 
 ---
 
+## CZ - Free Learning Sources
+
+1. pyLadies <https://naucse.python.cz>
+
+---
+
 ## 24.11.2023 13:42
 
 Link co nefunguje blank [TankONO - TankONO](http://www.tank-ono.cz/cz/index.php?page=cenik){target="\_blank"}
