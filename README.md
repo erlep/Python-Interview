@@ -149,3 +149,13 @@ Learn REST API with Flask: https://lnkd.in/e-TTahQf
 
 zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+
+--
+
+# python start web
+
+python -m webbrowser "http:///google.com"
+
+# python start tkinter
+
+python -m tkinter
