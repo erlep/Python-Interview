@@ -148,6 +148,22 @@ Learn REST API with Flask: https://lnkd.in/e-TTahQf
 6. Python Resume Ideas: https://lnkd.in/e_Fb7uNi
 
 zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+
+Jupyter odkazy
+
+Programování v jazyce Python - https://www.geeksforgeeks.org/python-programming-language-tutorial/?ref=gcse_ind
+
+Česká stránka o programování v jazyce Python - https://www.itnetwork.cz/python/zaklady/python-tutorial-uvod-do-pythonu-a-zakladni-matematicke-operace
+
+Tvroba GUI s využitím knihovny Tkinter - http://tkinter.programujte.com
+
+IDE Jupyter Notebook - https://jupyter.org/try-jupyter/lab
+
+IDE Google Colab - https://colab.research.google.com
+
+Anaconda Cloud - https://anaconda.cloud
+
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 
 --
@@ -159,3 +175,7 @@ python -m webbrowser "http:///google.com"
 # python start tkinter
 
 python -m tkinter
+
+--
+
+mypy .\Python-Interview\py.py
