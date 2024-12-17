@@ -179,3 +179,100 @@ python -m tkinter
 --
 
 mypy .\Python-Interview\py.py
+
+--
+
+---
+
+python ruff
+python mypy
+
+---
+
+uv
+
+---
+
+ROPE
+
+pip install rope
+
+---
+
+ruff
+ruff --help
+
+Commands:
+check Run Ruff on the given files or directories
+rule Explain a rule (or all rules)
+config List or describe the available configuration options
+linter List all supported upstream linters
+clean Clear any caches in the current directory and any subdirectories
+format Run the Ruff formatter on the given files or directories
+server Run the language server
+analyze Run analysis over Python source code
+version Display Ruff's version
+help Print this message or the help of the given subcommand(s)
+
+ruff check
+
+---
+
+uv
+(vEnv) C:\peg\onse\prg\ggg\Python-Interview>pip install uv
+Collecting uv
+Downloading uv-0.5.9-py3-none-win_amd64.whl.metadata (11 kB)
+Downloading uv-0.5.9-py3-none-win_amd64.whl (16.2 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.2/16.2 MB 30.0 MB/s eta 0:00:00
+Installing collected packages: uv
+Successfully installed uv-0.5.9
+
+(vEnv) C:> uv
+An extremely fast Python package manager.
+
+Usage: uv [OPTIONS] <COMMAND>
+
+Commands:
+run Run a command or script
+init Create a new project
+add Add dependencies to the project
+remove Remove dependencies from the project
+sync Update the project's environment
+lock Update the project's lockfile
+export Export the project's lockfile to an alternate format
+tree Display the project's dependency tree
+tool Run and install commands provided by Python packages
+python Manage Python versions and installations
+pip Manage Python packages with a pip-compatible interface
+venv Create a virtual environment
+build Build Python packages into source distributions and wheels
+publish Upload distributions to an index
+cache Manage uv's cache
+self Manage the uv executable
+version Display uv's version
+help Display documentation for a command
+
+Cache options:
+-n, --no-cache Avoid reading from or writing to the cache, instead using a temporary directory for the duration of the operation [env: UV_NO_CACHE=]
+--cache-dir <CACHE_DIR> Path to the cache directory [env: UV_CACHE_DIR=]
+
+Python options:
+--python-preference <PYTHON_PREFERENCE> Whether to prefer uv-managed or system Python installations [env: UV_PYTHON_PREFERENCE=] [possible values: only-managed, managed, system, only-system]
+--no-python-downloads Disable automatic downloads of Python. [env: "UV_PYTHON_DOWNLOADS=never"]
+
+Global options:
+-q, --quiet Do not print any output
+-v, --verbose... Use verbose output
+--color <COLOR_CHOICE> Control colors in output [default: auto] [possible values: auto, always, never]
+--native-tls Whether to load TLS certificates from the platform's native certificate store [env: UV_NATIVE_TLS=]
+--offline Disable network access [env: UV_OFFLINE=]
+--allow-insecure-host <ALLOW_INSECURE_HOST> Allow insecure connections to a host [env: UV_INSECURE_HOST=]
+--no-progress Hide all progress outputs [env: UV_NO_PROGRESS=]
+--directory <DIRECTORY> Change to the given directory prior to running the command
+--project <PROJECT> Run the command within the given project directory
+--config-file <CONFIG_FILE> The path to a `uv.toml` file to use for configuration [env: UV_CONFIG_FILE=]
+--no-config Avoid discovering configuration files (`pyproject.toml`, `uv.toml`) [env: UV_NO_CONFIG=]
+-h, --help Display the concise help for this command
+-V, --version Display the uv version
+
+Use `uv help` for more details.
