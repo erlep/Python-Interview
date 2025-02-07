@@ -9,6 +9,7 @@ from datetime import datetime
 
 print('\t⚡=== integer ===⚡')
 i: int = 1_000_000_000
+print(f'{i=}')
 print(f'{i}')
 print(f'{i:_}')
 print(f'{i:,}')
