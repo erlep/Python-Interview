@@ -24,4 +24,7 @@ ld = LoudDog()
 print(ld.noise())
 lb = LoudBike()
 print(lb.noise(), '\n')
+
+print('  MRO:')
+print(LoudDog.mro())
 print(LoudBike.mro())
