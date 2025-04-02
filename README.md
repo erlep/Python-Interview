@@ -38,6 +38,7 @@ and the others
 ## CZ - Free Learning Sources
 
 1. pyLadies <https://naucse.python.cz>
+2. Pyvec <https://pyvec.org>
 
 ---
 
